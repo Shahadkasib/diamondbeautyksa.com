@@ -1,0 +1,181 @@
+/* English fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=CairoPlay:wght@400;500;600;700&display=swap');
+
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  color: #2e2e2e;
+  text-align: center;
+
+  background: url('images/background.jpg') no-repeat center top fixed;
+  background-size: cover;
+}
+
+/* 🌐 Language Toggle Button */
+.lang-btn {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  padding: 8px 14px;
+  background-color: #d6bfae;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: 'Segoe UI', sans-serif;
+  z-index: 10;
+}
+
+.lang-btn:hover {
+  background-color: #c2a898;
+}
+
+/* 🔝 Top Bar */
+.top-bar {
+  background: #e5cabb;
+  padding: 15px 0;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.socials img {
+  width: 24px;
+  height: 24px;
+  filter: invert(20%);
+  transition: transform 0.3s;
+}
+
+.socials img:hover {
+  transform: scale(1.2);
+}
+
+/* ⭐ Hero Section */
+.hero {
+  padding: 30px 20px 80px;
+}
+
+.logo img {
+  max-width: 600px;
+  margin-top: -270px;
+  margin-bottom: 10px;
+}
+
+.soft-opening {
+  font-family: 'Great Vibes', magnolia script;
+  font-size: 80px;
+  color: #2e2e2e;
+  margin-top: -120px;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-family: 'Playfair Display', futura;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #3a3a3a;
+  margin: 40px auto 0 auto; /* pushes description down */
+  text-align: center;
+}
+
+.description-box {
+  width: fit-content;        /* box becomes the size of the text */
+  max-width: 40%;            /* prevents it from becoming too wide */
+  margin: 0 auto;            /* keeps it centered */
+  padding: 20px 30px;        /* inner spacing */
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* 🎯 Buttons Centered */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.btn {
+  padding: 12px 28px;
+  background-color: #ccc2b8;
+  color: #000;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #b8aa9e;
+}
+
+.whatsapp {
+  background-color: #25d366;
+  color: #fff;
+}
+
+.whatsapp:hover {
+  background-color: #1da851;
+}
+
+/* ========== ARABIC STYLES ONLY ========== */
+
+/* Default Arabic font for most text */
+body[dir="rtl"] {
+  font-family: 'Tajawal', sans-serif;
+}
+
+/* Arabic title (الافتتاح التجريبي) – cursive + correct color */
+body[dir="rtl"] .soft-opening {
+  font-family: 'Aref Ruqaa Ink', serif !important;
+  font-size: 56px;
+  font-weight: 700;
+  color: #3C3C3C !important;   /* same as English */
+  margin-bottom: 25px;
+
+}
+/* ARABIC TITLE FINAL FIX */
+body[dir="rtl"] .soft-opening {
+  font-family: 'Reem Kufi Ink', serif !important;
+  font-size: 70px;
+  font-weight: 700;
+  color: #3C3C3C !important;  /* SAME GREY AS ENGLISH */
+  text-shadow: none !important;
+}
+
+/* Arabic description box text – clean, classy, not cursive */
+body[dir="rtl"] .description-box,
+body[dir="rtl"] .description {
+  font-family: 'Tajawal', sans-serif !important;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 2.1;
+  color: #3C3C3C !important;     /* same color */
+}
+
+/* Arabic buttons text – match description font */
+body[dir="rtl"] .buttons .btn {
+  font-family: 'Tajawal', sans-serif !important;
+}
+
+html[dir="rtl"] .soft-opening {
+  font-weight: 700;
+  font-size: 56px;
+}
