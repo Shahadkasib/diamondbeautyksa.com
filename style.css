@@ -16,7 +16,7 @@ body {
   color: #2e2e2e;
   text-align: center;
 
-  background: url('images/background.jpg') no-repeat center top fixed;
+  background: url('background.jpg') no-repeat center top fixed;
   background-size: cover;
 }
 
