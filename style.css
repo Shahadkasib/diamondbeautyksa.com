@@ -180,50 +180,53 @@ html[dir="rtl"] .soft-opening {
   font-size: 56px;
 }
 
-/* ========== RESPONSIVE LAYOUT (PHONES + TABLETS) ========== */
-@media (max-width: 768px) {
+/* ===== UNIFIED STACKED LAYOUT FOR PHONES + TABLETS ONLY ===== */
+@media (max-width: 1024px) {
 
-  /* Stop sideways scroll / zoom-out */
-  html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  /* Move the whole hero (logo + title + box + buttons) up */
+  /* Main hero area: everything centered & stacked */
   .hero {
-    margin: 20px auto 40px !important;  /* ⬅ change 20px to 10 or 0 if you want it closer */
+    max-width: 100%;
+    margin: 40px auto 40px;        /* distance from top bar + bottom */
     padding: 0 16px;
+    display: flex;
+    flex-direction: column;        /* stack: logo, title, box, buttons */
+    align-items: center;
+    text-align: center;
   }
 
-  /* Logo centred and a bit closer to the heading */
+  /* Logo directly under the top bar and centered */
   .logo img {
     display: block;
-    margin: 0 auto 16px !important;
+    margin: 0 auto 12px;           /* space under the logo */
     width: 70%;
     max-width: 260px;
     height: auto;
   }
 
-  /* Soft Opening / Arabic heading – same position for both languages */
+  /* “Soft Opening / الافتتاح التجريبي” title */
   .soft-opening {
-    font-size: 2rem;
-    margin-top: 0 !important;
-  }
-}
-
-/* Really small phones (extra tweak) */
-@media (max-width: 430px) {
-  .soft-opening {
-    font-size: 1.7rem;
+    margin-top: 8px;               /* small gap under logo */
+    font-size: clamp(2.1rem, 4vw, 2.6rem);
   }
 
+  /* White description box */
   .description-box {
-    padding: 16px 14px;
+    width: 100%;
+    max-width: 90%;                /* slightly smaller than screen */
+    margin: 16px auto;             /* centered */
+  }
+
+  /* Buttons area */
+  .buttons {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;        /* Call above WhatsApp on phones */
+    align-items: center;
+    gap: 12px;
   }
 
   .btn {
-    width: 100%;
-    max-width: 260px;         /* buttons stay big & tappable */
+    width: min(260px, 80%);        /* same width for both buttons */
   }
 }
 
