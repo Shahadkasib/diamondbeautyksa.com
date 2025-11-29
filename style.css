@@ -226,3 +226,10 @@ html[dir="rtl"] .soft-opening {
     max-width: 260px;         /* buttons stay big & tappable */
   }
 }
+
+/* FORCE LOGO UP ON PHONES ONLY */
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 0px !important;   /* ⬅ change this number until you're happy */
+  }
+}
