@@ -14,10 +14,15 @@
 
 body {
   font-family: 'Georgia', serif;
-  color: #2e2e2e;
+  color: #3c3c3c;
   text-align: center;
-  background: url('background.jpg') center center / cover no-repeat;
+  /* 🔥 responsive background setup */
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
   background-size: cover;
+  background-attachment: scroll;  /* IMPORTANT: not fixed, so iPhone can resize it */
+  background-color: #fdf9f5; /* optional fallback */
 }
 
 /* 🌐 Language Toggle Button */
@@ -268,12 +273,12 @@ html[dir="rtl"] .soft-opening {
   }
 }
 
-/* BACKGROUND FIX — PHONES & TABLETS */
+/* Make sure phones & tablets resize the background fully */
 @media (max-width: 1024px) {
   body {
     background-attachment: scroll !important;
     background-size: cover !important;
-    background-position: center !important;
+    background-position: center top !important;
     background-repeat: no-repeat !important;
   }
 }
