@@ -483,16 +483,15 @@ body {
     background-attachment: scroll; /* avoid weird jump on mobile */
   }
 
-  .hero {
-    margin: 110px auto 90px;
-    padding: 0 18px;
+@media (max-width: 1024px) {
+  .logo img {
+    margin-top: 10px !important;
   }
 
   .soft-opening {
-    font-size: 2.7rem;
-    margin-top: 18px;
-    margin-bottom: 22px;
+    margin-top: 25px !important;
   }
+}
 
   .description-box {
     width: 90%;
