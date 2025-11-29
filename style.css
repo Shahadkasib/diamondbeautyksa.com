@@ -239,15 +239,25 @@ html[dir="rtl"] .soft-opening {
 
 /* ===== FIX DESCRIPTION BOX SIZE ON PHONES & TABLETS ===== */
 @media (max-width: 1024px) {
+
+  /* Better description-box size */
   .description-box {
-    width: 90%;              /* responsive width */
-    max-width: 520px;        /* stops it from getting too wide */
-    padding: 18px 20px;      /* same padding on all sides */
-    margin: 18px auto;       /* center it */
+    width: 90%;
+    max-width: 520px;       /* remove the long stretched box */
+    margin: 18px auto;
+    padding: 18px 20px;
   }
 
-  .description {
-    font-size: 0.95rem;
-    line-height: 1.6;
+  /* Buttons next to each other (NOT stacked) */
+  .buttons {
+    display: flex;
+    flex-direction: row;     /* ⬅ forces side-by-side */
+    justify-content: center;
+    gap: 12px;                /* space between buttons */
+  }
+
+  .btn {
+    width: auto;             /* ⬅ prevents stretching */
+    min-width: 135px;        /* keeps them looking equal */
   }
 }
