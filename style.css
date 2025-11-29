@@ -236,3 +236,18 @@ html[dir="rtl"] .soft-opening {
     margin-top: 0px !important;   /* ⬅ change this number until you're happy */
   }
 }
+
+/* ===== FIX DESCRIPTION BOX SIZE ON PHONES & TABLETS ===== */
+@media (max-width: 1024px) {
+  .description-box {
+    width: 90%;              /* responsive width */
+    max-width: 520px;        /* stops it from getting too wide */
+    padding: 18px 20px;      /* same padding on all sides */
+    margin: 18px auto;       /* center it */
+  }
+
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
