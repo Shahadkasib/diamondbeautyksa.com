@@ -193,7 +193,7 @@ html[dir="rtl"] .soft-opening {
 
   /* Keep hero content centered and a bit closer to top bar */
   .hero {
-    margin: 80px auto 40px;   /* under top bar, centered */
+    margin: 40px auto 20px;   /* under top bar, centered */
     padding: 0 16px;          /* side space so nothing touches edges */
   }
 
@@ -205,10 +205,6 @@ html[dir="rtl"] .soft-opening {
     max-width: 260px;         /* looks good on most phones */
     height: auto;
   }
-
-  .logo {
-  margin-top: 10px;   /* reduce spacing ABOVE logo */
-}
   
   /* Soft Opening / Arabic heading */
   .soft-opening {
