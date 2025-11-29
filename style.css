@@ -193,7 +193,7 @@ html[dir="rtl"] .soft-opening {
 
   /* Keep hero content centered and a bit closer to top bar */
   .hero {
-    margin: 40px auto 20px;   /* under top bar, centered */
+    margin: 20px auto 0px;   /* under top bar, centered */
     padding: 0 16px;          /* side space so nothing touches edges */
   }
 
