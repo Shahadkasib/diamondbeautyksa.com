@@ -238,26 +238,32 @@ html[dir="rtl"] .soft-opening {
 }
 
 /* ===== FIX DESCRIPTION BOX SIZE ON PHONES & TABLETS ===== */
+/* ===== ABSOLUTE OVERRIDE FOR PHONES + TABLETS ===== */
 @media (max-width: 1024px) {
 
-  /* Better description-box size */
+  /* description box auto size */
   .description-box {
-    width: 90%;
-    max-width: 520px;       /* remove the long stretched box */
-    margin: 18px auto;
-    padding: 18px 20px;
+    width: 90% !important;
+    max-width: 520px !important;
+    padding: 18px 20px !important;
+    margin: 16px auto !important;
   }
 
-  /* Buttons next to each other (NOT stacked) */
+  /* buttons SIDE by SIDE, not stacked */
   .buttons {
-    display: flex;
-    flex-direction: row;     /* ⬅ forces side-by-side */
-    justify-content: center;
-    gap: 12px;                /* space between buttons */
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 12px !important;
   }
 
   .btn {
-    width: auto;             /* ⬅ prevents stretching */
-    min-width: 135px;        /* keeps them looking equal */
+    width: auto !important;
+    min-width: 135px !important;
+  }
+
+  /* move the whole block up so logo is under top bar */
+  .hero {
+    margin-top: 30px !important;   /* change to 20 / 10 / 0 if you want it even higher */
   }
 }
