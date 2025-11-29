@@ -207,7 +207,7 @@ html[dir="rtl"] .soft-opening {
   }
 
   .logo {
-  margin-top: 0px;   /* reduce spacing ABOVE logo */
+  margin-top: 10px;   /* reduce spacing ABOVE logo */
 }
   
   /* Soft Opening / Arabic heading */
