@@ -181,55 +181,33 @@ html[dir="rtl"] .soft-opening {
 }
 
 /* ========== RESPONSIVE LAYOUT (PHONES + TABLETS) ========== */
-
-/* Phones & small tablets */
 @media (max-width: 768px) {
 
-  /* Stop sideways scroll / weird zoom-out */
+  /* Stop sideways scroll / zoom-out */
   html, body {
     max-width: 100%;
     overflow-x: hidden;
   }
 
-  /* Keep hero content centered and a bit closer to top bar */
+  /* Move the whole hero (logo + title + box + buttons) up */
   .hero {
-    margin: 20px auto 0px;   /* under top bar, centered */
-    padding: 0 16px;          /* side space so nothing touches edges */
+    margin: 20px auto 40px !important;  /* ⬅ change 20px to 10 or 0 if you want it closer */
+    padding: 0 16px;
   }
 
-  /* Logo: always centered & scalable */
+  /* Logo centred and a bit closer to the heading */
   .logo img {
     display: block;
-    margin: 0 auto 24px;      /* center and add space under logo */
+    margin: 0 auto 16px !important;
     width: 70%;
-    max-width: 260px;         /* looks good on most phones */
+    max-width: 260px;
     height: auto;
   }
-  
-  /* Soft Opening / Arabic heading */
+
+  /* Soft Opening / Arabic heading – same position for both languages */
   .soft-opening {
-    font-size: 2rem;          /* a bit smaller for phones */
-    margin-top: 0;
-  }
-
-  /* White description box */
-  .description-box {
-    width: 100%;
-    max-width: 520px;         /* keeps it nice and readable */
-    margin: 24px auto 24px;   /* perfectly centered */
-    padding: 18px 16px;
-  }
-
-  /* Buttons container */
-  .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;          /* if screen is tiny, they can wrap */
-  }
-
-  .btn {
-    min-width: 130px;
+    font-size: 2rem;
+    margin-top: 0 !important;
   }
 }
 
