@@ -69,10 +69,10 @@ body {
   padding: 30px 20px 80px;
 }
 
-.logo img {
-  max-width: 600px;
-  margin-top: -270px;
-  margin-bottom: 10px;
+img.logo {
+  max-width: 100%; /* Ensures the image never exceeds the width of its parent container */
+  height: auto;    /* Maintains the aspect ratio of the image */
+  display: block;  /* Prevents extra space below the image, often helpful for layout */
 }
 
 .soft-opening {
