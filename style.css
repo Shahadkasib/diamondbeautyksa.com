@@ -268,10 +268,12 @@ html[dir="rtl"] .soft-opening {
   }
 }
 
-/* Background fix for phones & tablets */
+/* BACKGROUND FIX — PHONES & TABLETS */
 @media (max-width: 1024px) {
   body {
-    background-attachment: scroll !important; /* avoids freezing on phones */
-    background-size: cover !important;       /* resizes to full screen */
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
   }
 }
