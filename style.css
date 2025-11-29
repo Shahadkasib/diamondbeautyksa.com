@@ -179,3 +179,105 @@ html[dir="rtl"] .soft-opening {
   font-weight: 700;
   font-size: 56px;
 }
+
+/* =========  MOBILE & TABLET LAYOUT  ========= */
+
+/* Tablet and small laptops */
+@media (max-width: 768px) {
+
+  /* Keep everything inside the screen */
+  body {
+    padding: 0 16px;
+    background-attachment: scroll;  /* fixed backgrounds are buggy on phones */
+  }
+
+  /* Logo + heading closer to the top and centered */
+  .hero {
+    margin-top: 90px;
+  }
+
+  .logo img {
+    max-width: 260px;
+    width: 70%;
+    height: auto;
+  }
+
+  /* "Soft Opening" heading */
+  .soft-opening {
+    font-size: 2.2rem;
+    margin-top: 32px;
+  }
+
+  /* Description card */
+  .description-box {
+    width: 100%;
+    max-width: 520px;
+    margin: 24px auto 0;
+    padding: 20px 18px;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  /* Buttons in one column, full-width */
+  .buttons {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  /* Social icons a bit closer together */
+  .top-bar .socials {
+    gap: 18px;
+  }
+}
+
+/* Phones (very small screens) */
+@media (max-width: 480px) {
+
+  body {
+    padding: 0 12px;
+  }
+
+  .hero {
+    margin-top: 70px;
+  }
+
+  .soft-opening {
+    font-size: 1.8rem;
+  }
+
+  .description-box {
+    padding: 18px 14px;
+    border-radius: 14px;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  /* Top bar: make sure nothing overflows */
+  .top-bar {
+    padding: 10px 0;
+  }
+
+  .top-bar .socials {
+    gap: 12px;
+  }
+
+  .lang-btn {
+    top: 10px;
+    right: 10px;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
