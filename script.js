@@ -1,7 +1,19 @@
-function setLang(lang) {
-  const elements = document.querySelectorAll('[data-en]');
-  document.body.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
-  elements.forEach(el => {
-    el.textContent = el.getAttribute(`data-${lang}`);
+// Accordion toggle
+const accBtns = document.querySelectorAll('.accordion-btn');
+
+accBtns.forEach(btn => {
+  btn.addEventListener('click', function () {
+    const content = this.nextElementSibling;
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    this.classList.toggle('active');
   });
-}
+});
+
+// Language Toggle (Simple visibility toggle - you can expand with translations)
+document.getElementById('en-btn').addEventListener('click', () => {
+  document.body.dir = 'ltr';
+});
+
+document.getElementById('ar-btn').addEventListener('click', () => {
+  document.body.dir = 'rtl';
+});
