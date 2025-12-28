@@ -1,95 +1,105 @@
 body {
+  font-family: 'The Seasons', sans-serif;
+  background: #f4f1e9;
   margin: 0;
-  font-family: 'The Seasons', serif;
-  background: #f5f2e9;
-  color: #4d4038;
-  scroll-behavior: smooth;
+  padding: 0;
+  direction: ltr;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background: #fff;
+  padding: 1rem 2rem;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid #e6e6e6;
 }
 
-.logo img {
-  height: 50px;
+.logo {
+  height: 40px;
 }
 
 nav a {
-  margin-left: 20px;
+  margin: 0 1rem;
   text-decoration: none;
-  color: #4d4038;
+  color: #4a3e36;
   font-weight: bold;
 }
 
-.section {
-  padding: 80px 20px;
+.lang-toggle button {
+  margin-left: 0.5rem;
+  background: none;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+section {
+  padding: 4rem 2rem;
   text-align: center;
 }
 
-h1, h2, h3 {
+#hero {
+  background: #deccb1;
   font-family: 'Alex Brush', cursive;
 }
 
-.hero-title {
-  font-size: 48px;
+#hero h1, #hero h2 {
+  font-size: 2.5rem;
+  margin: 0.5rem;
+  color: #5c3f30;
 }
 
-.hero-subtitle {
-  font-size: 42px;
-  margin-bottom: 10px;
-}
-
-.cta-buttons {
-  margin-top: 20px;
+.btn-group {
+  margin-top: 1rem;
 }
 
 .btn {
-  padding: 12px 24px;
-  margin: 8px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
+  margin: 0.5rem;
+  padding: 10px 20px;
   border-radius: 5px;
-  text-decoration: none;
   color: white;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.book { background-color: #8b6f53; }
-.whatsapp { background-color: #adbba5; color: #fff; }
-.call { background-color: #e37b6e; }
+.btn.brown { background: #8b6d52; }
+.btn.green { background: #adbba5; }
+.btn.red   { background: #e97f6b; }
 
-.service-list {
+.services-grid {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .service-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   width: 250px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.lang-toggle {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+.price {
+  font-weight: bold;
+  color: #8b6d52;
 }
 
-.social-icons a {
+.social-icons i {
+  font-size: 28px;
   margin: 0 10px;
-  font-size: 24px;
-  color: #4d4038;
+  color: #8b6d52;
 }
 
-[lang="ar"] body {
-  direction: rtl;
-  font-family: 'Scheherazade', serif;
+@media (max-width: 768px) {
+  .services-grid {
+    flex-direction: column;
+    align-items: center;
+  }
 }
