@@ -1,141 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Scheherazade&display=swap');
-
-:root {
-  --primary-brown: #9C7355;
-  --beige: #E4D2BC;
-  --accent-pink: #E6B7B2;
-  --off-white: #F5F3EC;
-  --black: #44403C;
-  --accent-coral: #EC7262;
-  --whatsapp-green: #ADBBA5;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
+  margin: 0;
   font-family: 'The Seasons', serif;
-  background-color: var(--off-white);
-  color: var(--black);
-  transition: all 0.4s ease;
-}
-
-html[lang="ar"] body {
-  font-family: 'Scheherazade', serif;
-  direction: rtl;
+  background: #f5f2e9;
+  color: #4d4038;
+  scroll-behavior: smooth;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background: white;
-  border-bottom: 1px solid var(--beige);
+  padding: 20px;
+  background: #fff;
 }
 
-.logo-img {
+.logo img {
   height: 50px;
-  width: auto;
-  object-fit: contain;
 }
 
-nav a, nav button {
-  margin: 0 0.5rem;
+nav a {
+  margin-left: 20px;
   text-decoration: none;
-  color: var(--black);
-  background: none;
-  border: none;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.hero {
-  text-align: center;
-  padding: 5rem 2rem;
-  background-color: var(--beige);
-}
-
-.hero h1 {
-  font-family: 'Alex Brush', cursive;
-  font-size: 3rem;
-  color: var(--primary-brown);
-  line-height: 1.4;
-}
-
-.hero p {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-}
-
-.cta-buttons .btn {
-  margin: 1rem 0.5rem;
-  padding: 0.8rem 1.5rem;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  display: inline-block;
-}
-
-.btn.book { background-color: var(--primary-brown); }
-.btn.whatsapp { background-color: var(--whatsapp-green); }
-.btn.call { background-color: var(--accent-coral); }
-
-footer {
-  text-align: center;
-  padding: 2rem 0;
-  background-color: var(--off-white);
-}
-
-.social-icons a {
-  font-size: 1.5rem;
-  margin: 0 0.5rem;
-}
-
-.tabs {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 2rem 0;
-}
-
-.tab-link {
-  padding: 0.5rem 1rem;
-  background: var(--beige);
-  border: none;
-  cursor: pointer;
+  color: #4d4038;
   font-weight: bold;
 }
 
-.tab-link.active {
-  background: var(--primary-brown);
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  font-family: 'Alex Brush', cursive;
+}
+
+.hero-title {
+  font-size: 48px;
+}
+
+.hero-subtitle {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.cta-buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px 24px;
+  margin: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
   color: white;
 }
 
-.tab-content {
-  display: none;
-  padding: 2rem;
+.book { background-color: #8b6f53; }
+.whatsapp { background-color: #adbba5; color: #fff; }
+.call { background-color: #e37b6e; }
+
+.service-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.tab-content.active {
-  display: block;
+.service-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
+.lang-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
-table, th, td {
-  border: 1px solid #ddd;
+.social-icons a {
+  margin: 0 10px;
+  font-size: 24px;
+  color: #4d4038;
 }
 
-th, td {
-  padding: 0.8rem;
-  text-align: center;
+[lang="ar"] body {
+  direction: rtl;
+  font-family: 'Scheherazade', serif;
 }
