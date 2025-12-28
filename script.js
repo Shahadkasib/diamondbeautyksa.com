@@ -1,9 +1,14 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
+const langToggle = document.getElementById("langToggle");
+const html = document.documentElement;
+
+langToggle.addEventListener("click", () => {
+  if (html.lang === "en") {
+    html.lang = "ar";
+    html.dir = "rtl";
+    langToggle.textContent = "EN";
+  } else {
+    html.lang = "en";
+    html.dir = "ltr";
+    langToggle.textContent = "AR";
+  }
 });

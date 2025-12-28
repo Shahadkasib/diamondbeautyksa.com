@@ -1,11 +1,16 @@
-/* version 3 */
-/* English fonts */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=CairoPlay:wght@400;500;600;700&display=swap');
+:root {
+  --primary-brown: #9C7355;
+  --beige: #E4D2BC;
+  --accent-pink: #E6B7B2;
+  --off-white: #F5F3EC;
+  --black: #44403C;
+  --accent-coral: #EC7262;
+  --whatsapp-green: #ADBBA5;
+}
 
-/* Reset & base styles */
 * {
   margin: 0;
   padding: 0;
@@ -13,272 +18,124 @@
 }
 
 body {
-  font-family: 'Georgia', serif;
-  color: #3c3c3c;
-  text-align: center;
-  /* 🔥 responsive background setup */
-  background-image: url('background.jpg');
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-  background-attachment: scroll;  /* IMPORTANT: not fixed, so iPhone can resize it */
-  background-color: #fdf9f5; /* optional fallback */
+  font-family: 'The Seasons', serif;
+  background-color: var(--off-white);
+  color: var(--black);
+  transition: all 0.4s ease;
 }
 
-/* 🌐 Language Toggle Button */
-.lang-btn {
-  position: absolute;
-  top: 12px;
-  right: 20px;
-  padding: 8px 14px;
-  background-color: #d6bfae;
-  color: #000;
-  border: none;
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  font-family: 'Segoe UI', sans-serif;
-  z-index: 10;
+html[lang="ar"] body {
+  font-family: 'Scheherazade', serif;
+  direction: rtl;
 }
 
-.lang-btn:hover {
-  background-color: #c2a898;
-}
-
-/* 🔝 Top Bar */
-.top-bar {
-  background: #e5cabb;
-  padding: 15px 0;
-}
-
-.socials {
+header {
   display: flex;
-  justify-content: center;
-  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  border-bottom: 1px solid var(--beige);
 }
 
-.socials img {
-  width: 24px;
-  height: 24px;
-  filter: invert(20%);
-  transition: transform 0.3s;
+.logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
 }
 
-.socials img:hover {
-  transform: scale(1.2);
-}
-
-/* ⭐ Hero Section */
-.hero {
-  padding: 30px 20px 80px;
-}
-
-.logo img {
-  max-width: 600px;
-  margin-top: -270px;
-  margin-bottom: 10px;
-}
-
-.soft-opening {
-  font-family: 'Great Vibes', magnolia script;
-  font-size: 80px;
-  color: #2e2e2e;
-  margin-top: -120px;
-  margin-bottom: 10px;
-}
-
-.description {
-  font-family: 'Playfair Display', futura;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #3a3a3a;
-  margin: 40px auto 0 auto; /* pushes description down */
-  text-align: center;
-}
-
-.description-box {
-  width: fit-content;        /* box becomes the size of the text */
-  max-width: 40%;            /* prevents it from becoming too wide */
-  margin: 0 auto;            /* keeps it centered */
-  padding: 20px 30px;        /* inner spacing */
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-/* 🎯 Buttons Centered */
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 60px;
-}
-
-.btn {
-  padding: 12px 28px;
-  background-color: #ccc2b8;
-  color: #000;
-  border-radius: 25px;
+nav a, nav button {
+  margin: 0 0.5rem;
   text-decoration: none;
+  color: var(--black);
+  background: none;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background-color: var(--beige);
+}
+
+.hero h1 {
+  font-family: 'Alex Brush', cursive;
+  font-size: 3rem;
+  color: var(--primary-brown);
+  line-height: 1.4;
+}
+
+.hero p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.cta-buttons .btn {
+  margin: 1rem 0.5rem;
+  padding: 0.8rem 1.5rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.btn.book { background-color: var(--primary-brown); }
+.btn.whatsapp { background-color: var(--whatsapp-green); }
+.btn.call { background-color: var(--accent-coral); }
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: var(--off-white);
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.tab-link {
+  padding: 0.5rem 1rem;
+  background: var(--beige);
+  border: none;
+  cursor: pointer;
   font-weight: bold;
-  font-family: 'Segoe UI', sans-serif;
-  transition: all 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #b8aa9e;
+.tab-link.active {
+  background: var(--primary-brown);
+  color: white;
 }
 
-.whatsapp {
-  background-color: #25d366;
-  color: #fff;
+.tab-content {
+  display: none;
+  padding: 2rem;
 }
 
-.whatsapp:hover {
-  background-color: #1da851;
+.tab-content.active {
+  display: block;
 }
 
-/* ========== ARABIC STYLES ONLY ========== */
-
-/* Default Arabic font for most text */
-body[dir="rtl"] {
-  font-family: 'Tajawal', sans-serif;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
 }
 
-/* Arabic title (الافتتاح التجريبي) – cursive + correct color */
-body[dir="rtl"] .soft-opening {
-  font-family: 'Aref Ruqaa Ink', serif !important;
-  font-size: 56px;
-  font-weight: 700;
-  color: #3C3C3C !important;   /* same as English */
-  margin-bottom: 25px;
-
-}
-/* ARABIC TITLE FINAL FIX */
-body[dir="rtl"] .soft-opening {
-  font-family: 'Reem Kufi Ink', serif !important;
-  font-size: 70px;
-  font-weight: 700;
-  color: #3C3C3C !important;  /* SAME GREY AS ENGLISH */
-  text-shadow: none !important;
+table, th, td {
+  border: 1px solid #ddd;
 }
 
-/* Arabic description box text – clean, classy, not cursive */
-body[dir="rtl"] .description-box,
-body[dir="rtl"] .description {
-  font-family: 'Tajawal', sans-serif !important;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 2.1;
-  color: #3C3C3C !important;     /* same color */
-}
-
-/* Arabic buttons text – match description font */
-body[dir="rtl"] .buttons .btn {
-  font-family: 'Tajawal', sans-serif !important;
-}
-
-html[dir="rtl"] .soft-opening {
-  font-weight: 700;
-  font-size: 56px;
-}
-
-/* ===== UNIFIED STACKED LAYOUT FOR PHONES + TABLETS ONLY ===== */
-@media (max-width: 1024px) {
-
-  /* Main hero area: everything centered & stacked */
-  .hero {
-    max-width: 100%;
-    margin: 40px auto 40px;        /* distance from top bar + bottom */
-    padding: 0 16px;
-    display: flex;
-    flex-direction: column;        /* stack: logo, title, box, buttons */
-    align-items: center;
-    text-align: center;
-  }
-
-  /* Logo directly under the top bar and centered */
-  .logo img {
-    display: block;
-    margin: 0 auto 12px;           /* space under the logo */
-    width: 70%;
-    max-width: 260px;
-    height: auto;
-  }
-
-  /* “Soft Opening / الافتتاح التجريبي” title */
-  .soft-opening {
-    margin-top: 8px;               /* small gap under logo */
-    font-size: clamp(2.1rem, 4vw, 2.6rem);
-  }
-
-  /* White description box */
-  .description-box {
-    width: 100%;
-    max-width: 90%;                /* slightly smaller than screen */
-    margin: 16px auto;             /* centered */
-  }
-
-  /* Buttons area */
-  .buttons {
-    margin-top: 18px;
-    display: flex;
-    flex-direction: column;        /* Call above WhatsApp on phones */
-    align-items: center;
-    gap: 12px;
-  }
-
-  .btn {
-    width: min(260px, 80%);        /* same width for both buttons */
-  }
-}
-
-/* FORCE LOGO UP ON PHONES ONLY */
-@media (max-width: 768px) {
-  .hero {
-    margin-top: 0px !important;   /* ⬅ change this number until you're happy */
-  }
-}
-
-/* ===== FIX DESCRIPTION BOX SIZE ON PHONES & TABLETS ===== */
-/* ===== ABSOLUTE OVERRIDE FOR PHONES + TABLETS ===== */
-@media (max-width: 1024px) {
-
-  /* description box auto size */
-  .description-box {
-    width: 90% !important;
-    max-width: 520px !important;
-    padding: 18px 20px !important;
-    margin: 16px auto !important;
-  }
-
-  /* buttons SIDE by SIDE, not stacked */
-  .buttons {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    gap: 12px !important;
-  }
-
-  .btn {
-    width: auto !important;
-    min-width: 135px !important;
-  }
-
-  /* move the whole block up so logo is under top bar */
-  .hero {
-    margin-top: 30px !important;   /* change to 20 / 10 / 0 if you want it even higher */
-  }
-}
-
-/* Make sure phones & tablets resize the background fully */
-@media (max-width: 1024px) {
-  body {
-    background-attachment: scroll !important;
-    background-size: cover !important;
-    background-position: center top !important;
-    background-repeat: no-repeat !important;
-  }
+th, td {
+  padding: 0.8rem;
+  text-align: center;
 }
