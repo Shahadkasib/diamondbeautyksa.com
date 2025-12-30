@@ -1,136 +1,55 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | Diamond Beauty</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap" rel="stylesheet" />
-  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://unpkg.com/@barba/core"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services – Diamond Beauty</title>
+  <link href="https://fonts.googleapis.com/css2?family=The+Seasons&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body data-barba="wrapper">
-  <div data-barba="container" data-barba-namespace="services">
-
-    <header>
-      <div class="logo">Diamond Beauty</div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="booking.html">Booking</a>
-        <a href="contact.html">Contact</a>
-        <button id="langToggle">AR</button>
-      </nav>
-    </header>
-
-    <main class="services-section">
-      <h1 class="page-title">Our Services</h1>
-
-      <div class="tabs">
-        <button class="tab-link active" data-tab="hair">Hair</button>
-        <button class="tab-link" data-tab="blow">Blow-Dry</button>
-        <button class="tab-link" data-tab="nails">Nails</button>
-        <button class="tab-link" data-tab="skin">Skin</button>
-        <button class="tab-link" data-tab="makeup">Makeup</button>
+  <header>
+    <nav>
+      <a href="index.html">
+        <img src="logo.png" alt="Diamond Beauty Logo" class="logo" />
+      </a>
+      <div class="lang-switch">
+        <button id="en-btn">EN</button>
+        <button id="ar-btn">AR</button>
       </div>
+    </nav>
+  </header>
 
-      <div class="tab-content active" id="hair">
-        <h2>Hair Services</h2>
-        <table>
-          <thead><tr><th>Service</th><th>الخدمة</th><th>Price (SAR)</th></tr></thead>
-          <tbody>
-            <tr><td>Ends Trim</td><td>قص الأطراف</td><td>100</td></tr>
-            <tr><td>Full Haircut</td><td>قص كامل</td><td>150 - 230</td></tr>
-            <tr><td>Bangs Cut</td><td>قص غرة</td><td>50</td></tr>
-            <tr><td>Hair Repair</td><td>ترميم الشعر</td><td>75</td></tr>
-            <tr><td>Hair Detox</td><td>ديتوكس للشعر</td><td>150</td></tr>
-            <tr><td>Moisturizing Masks</td><td>ماسك مرطب</td><td>150 - 350</td></tr>
-            <tr><td>Botox Treatment</td><td>علاج بوتوكس</td><td>500 - 1700</td></tr>
-            <tr><td>Protein Treatment</td><td>علاج بروتين</td><td>700 - 1900</td></tr>
-            <tr><td>Root Color</td><td>صبغة الجذور</td><td>230 - 300</td></tr>
-            <tr><td>Toner</td><td>رنساج</td><td>230 - 345</td></tr>
-            <tr><td>Color (Short)</td><td>صبغة قصيرة</td><td>300</td></tr>
-            <tr><td>Color (Medium)</td><td>صبغة متوسطة</td><td>500</td></tr>
-            <tr><td>Color (Long)</td><td>صبغة طويلة</td><td>600</td></tr>
-            <tr><td>Color (Extra-Long)</td><td>صبغة طويلة جداً</td><td>800</td></tr>
-          </tbody>
-        </table>
-      </div>
+  <main id="services">
+    <h2 data-en="Our Services" data-ar="خدماتنا">Our Services</h2>
 
-      <div class="tab-content" id="blow">
-        <h2>Blow-Dry & Styling</h2>
-        <table>
-          <thead><tr><th>Service</th><th>الخدمة</th><th>Price (SAR)</th></tr></thead>
-          <tbody>
-            <tr><td>Classic Blow (Short)</td><td>استشوار كلاسيك - قصير</td><td>70</td></tr>
-            <tr><td>Classic Blow (Medium)</td><td>متوسط</td><td>150</td></tr>
-            <tr><td>Classic Blow (Long)</td><td>طويل</td><td>200</td></tr>
-            <tr><td>Classic Blow (Extra-Long)</td><td>طويل جدا</td><td>250</td></tr>
-            <tr><td>Wavy Blow (Short)</td><td>استشوار ويفي - قصير</td><td>90</td></tr>
-            <tr><td>Wavy Blow (Medium)</td><td>متوسط</td><td>170</td></tr>
-            <tr><td>Wavy Blow (Long)</td><td>طويل</td><td>220</td></tr>
-            <tr><td>Wavy Blow (Extra-Long)</td><td>طويل جدا</td><td>270</td></tr>
-          </tbody>
-        </table>
+    <!-- Hair Services -->
+    <div class="accordion-box">
+      <button class="accordion-btn" data-en="Hair Services" data-ar="خدمات الشعر">Hair Services</button>
+      <div class="accordion-content">
+        <p><span data-en="Ends Trim" data-ar="قص الأطراف">Ends Trim</span> – 100 SAR</p>
+        <p><span data-en="Full Haircut" data-ar="قص كامل">Full Haircut</span> – 150–230 SAR</p>
+        <p><span data-en="Bangs Cut" data-ar="قص غرة">Bangs Cut</span> – 50 SAR</p>
+        <p><span data-en="Hair Repair" data-ar="ترميم الشعر">Hair Repair</span> – 75 SAR</p>
+        <p><span data-en="Hair Detox" data-ar="ديتوكس الشعر">Hair Detox</span> – 150 SAR</p>
+        <p><span data-en="Moisturizing Mask" data-ar="ماسك مرطب">Moisturizing Mask</span> – 150–350 SAR</p>
+        <p><span data-en="Botox Treatment" data-ar="علاج بوتوكس">Botox Treatment</span> – 500–1,700 SAR</p>
+        <p><span data-en="Protein Treatment" data-ar="علاج بروتين">Protein Treatment</span> – 700–1,900 SAR</p>
+        <p><span data-en="Root Color" data-ar="صبغة الجذور">Root Color</span> – 300 SAR</p>
+        <p><span data-en="Toner" data-ar="رنساج">Toner</span> – 500 SAR</p>
+        <p><span data-en="Single Color" data-ar="صبغة بلون واحد">Single Color</span> – 600–800 SAR</p>
       </div>
+    </div>
 
-      <div class="tab-content" id="nails">
-        <h2>Nail Services</h2>
-        <table>
-          <thead><tr><th>Service</th><th>الخدمة</th><th>Price (SAR)</th></tr></thead>
-          <tbody>
-            <tr><td>Manicure</td><td>مناكير</td><td>70</td></tr>
-            <tr><td>Classic Pedicure</td><td>بدكير كلاسيك</td><td>80</td></tr>
-            <tr><td>Diamond Pedicure</td><td>بدكير دايموند</td><td>150</td></tr>
-            <tr><td>Moroccan Pedicure</td><td>بدكير مغربي</td><td>150</td></tr>
-            <tr><td>Polish</td><td>لون أظافر</td><td>20</td></tr>
-            <tr><td>French Manicure</td><td>فرنش مناكير</td><td>30</td></tr>
-            <tr><td>Gel Polish</td><td>جل</td><td>100</td></tr>
-            <tr><td>French Gel</td><td>فرنش جل</td><td>120</td></tr>
-          </tbody>
-        </table>
-      </div>
+    <!-- Add other categories here... -->
 
-      <div class="tab-content" id="skin">
-        <h2>Skincare & Hair Removal</h2>
-        <table>
-          <thead><tr><th>Service</th><th>الخدمة</th><th>Price (SAR)</th></tr></thead>
-          <tbody>
-            <tr><td>Classic Facial</td><td>تنظيف كلاسيكي</td><td>200</td></tr>
-            <tr><td>Whitening Facial</td><td>تنظيف للتفتيح</td><td>250</td></tr>
-            <tr><td>Anti-Aging Facial</td><td>مقاوم لعلامات التقدم</td><td>250</td></tr>
-            <tr><td>Full Body Wax</td><td>إزالة شعر كامل</td><td>400</td></tr>
-            <tr><td>Eyebrow Threading</td><td>فتلة الحواجب</td><td>70</td></tr>
-            <tr><td>Upper Lip</td><td>الشنب</td><td>30</td></tr>
-          </tbody>
-        </table>
-      </div>
+  </main>
 
-      <div class="tab-content" id="makeup">
-        <h2>Makeup & Lashes</h2>
-        <table>
-          <thead><tr><th>Service</th><th>الخدمة</th><th>Price (SAR)</th></tr></thead>
-          <tbody>
-            <tr><td>Simple Makeup</td><td>مكياج بسيط</td><td>200</td></tr>
-            <tr><td>Evening Makeup</td><td>مكياج سهرة</td><td>320</td></tr>
-            <tr><td>Bridal Makeup</td><td>مكياج عروسة</td><td>1000</td></tr>
-            <tr><td>Classic Lashes</td><td>رموش كلاسيك</td><td>150</td></tr>
-            <tr><td>Hybrid Lashes</td><td>رموش هايبرد</td><td>250</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="cta-buttons">
-        <a href="https://wa.me/966XXXXXXXXX" class="btn whatsapp" target="_blank">WhatsApp</a>
-        <a href="tel:+966XXXXXXXXX" class="btn call">Call Now</a>
-        <a href="booking.html" class="btn book">Book Now</a>
-      </div>
-    </main>
-  </div>
+  <footer>
+    <p>&copy; 2025 Diamond Beauty</p>
+  </footer>
 
   <script src="script.js"></script>
-  <script src="barba-init.js"></script>
-  <script src="tabs.js"></script>
 </body>
 </html>
