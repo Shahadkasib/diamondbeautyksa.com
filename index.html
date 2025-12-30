@@ -1,94 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Diamond Beauty</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Icons -->
   <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- TOP BAR -->
-  <header class="topbar">
-    <div class="topbar-inner">
+<!-- TOP BAR (VISIBLE) -->
+<header class="topbar">
 
-      <!-- Social icons -->
-      <nav class="socials" aria-label="Social media">
-        <a href="https://instagram.com/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://tiktok.com/" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="https://snapchat.com/" target="_blank" aria-label="Snapchat"><i class="fa-brands fa-snapchat"></i></a>
-      </nav>
-
-      <!-- Language switch -->
-      <div class="lang-switch">
-        <button type="button" onclick="setLang('en')">EN</button>
-        <button type="button" onclick="setLang('ar')">AR</button>
-      </div>
-
+  <!-- Top row -->
+  <div class="topbar-row">
+    <div class="socials">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-snapchat"></i></a>
     </div>
 
-    <!-- LOGO (NOW REALLY TOP + CENTER) -->
-    <div class="logo-wrap">
-      <img src="logo.png" alt="Diamond Beauty Logo" class="logo fadeDown" />
+    <div class="lang-switch">
+      <button onclick="setLang('en')">EN</button>
+      <button onclick="setLang('ar')">AR</button>
     </div>
-  </header>
+  </div>
 
-  <!-- HERO -->
-  <main class="hero">
-    <h1 class="title fadeUp delay1"
-        data-en="Luxury, Redefined"
-        data-ar="الفخامة، كما يجب أن تكون">
-      Luxury, Redefined
-    </h1>
+  <!-- Logo row -->
+  <div class="logo-row">
+    <img src="logo.png" alt="Diamond Beauty Logo" class="logo">
+  </div>
 
-    <p class="about fadeUp delay2"
-       data-en="Once a small neighborhood salon in Ar Rawdah, Diamond Beauty grew with love, trust, and dedication. With over 20 years of experience, we are proud to open our doors today, bringing refined beauty, care, and expertise to every woman who walks in."
-       data-ar="بدأت دايموند بيوتي كصالون صغير في حي الروضة، ونمت بمحبة وثقة واهتمام. بخبرة تتجاوز 20 عاماً، نفخر اليوم بافتتاح أبوابنا لنقدم الجمال الراقي والعناية والخبرة لكل امرأة تزورنا.">
-      Once a small neighborhood salon in Ar Rawdah, Diamond Beauty grew with love, trust, and dedication. With over 20 years of experience, we are proud to open our doors today, bringing refined beauty, care, and expertise to every woman who walks in.
-    </p>
+</header>
 
-    <div class="actions fadeUp delay3">
-      <!-- View Services opens a PDF -->
-      <a class="btn primary" href="services.pdf" target="_blank"
-         data-en="View Services" data-ar="عرض الخدمات والأسعار">
-        View Services
-      </a>
+<!-- HERO -->
+<main class="hero">
+  <h1>Luxury, Redefined</h1>
 
-      <!-- Book Now goes to Fresha -->
-      <a class="btn outline" href="https://www.fresha.com/" target="_blank"
-         data-en="Book Now" data-ar="احجزي الآن">
-        Book Now
-      </a>
-    </div>
-  </main>
+  <p class="about">
+    Once a small neighborhood salon in Ar Rawdah, Diamond Beauty grew with love,
+    trust, and dedication. With over 20 years of experience, we are proud to open
+    our doors today, bringing refined beauty, care, and expertise to every woman
+    who walks in.
+  </p>
 
-  <!-- Floating Buttons -->
-  <a class="float whatsapp" href="https://wa.me/966000000000" target="_blank" aria-label="WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
+  <div class="actions">
+    <a href="services.pdf" target="_blank" class="btn primary">View Services</a>
+    <a href="https://www.fresha.com/" target="_blank" class="btn outline">Book Now</a>
+  </div>
+</main>
+
+<!-- FLOATING BUTTONS -->
+<a class="float whatsapp" href="#"><i class="fab fa-whatsapp"></i></a>
+<a class="float call" href="#"><i class="fas fa-phone"></i></a>
+
+<!-- FOOTER -->
+<footer>
+  <a href="https://maps.google.com/?q=Diamond+Beauty+Jeddah"
+     target="_blank"
+     class="map-btn">
+    View Location on Google Maps
   </a>
-  <a class="float call" href="tel:+966000000000" aria-label="Call">
-    <i class="fa-solid fa-phone"></i>
-  </a>
+  <p>© 2025 Diamond Beauty</p>
+</footer>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <a class="map-btn" href="https://maps.google.com/?q=Diamond+Beauty+Jeddah" target="_blank"
-       data-en="View Location on Google Maps"
-       data-ar="عرض الموقع على خرائط Google">
-      View Location on Google Maps
-    </a>
-    <p>© 2025 Diamond Beauty</p>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
