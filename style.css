@@ -1,104 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'The Seasons', serif;
   margin: 0;
-  background: #fffdf8;
+  font-family: 'The Seasons', serif;
+  background: #fffdf8 url("background.jpg") no-repeat center/cover;
   color: #4a3e36;
-  direction: ltr;
   scroll-behavior: smooth;
 }
 
-.logo {
-  height: 60px;
-}
-
+/* ---------- HEADER ---------- */
 header {
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 15px 40px;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  padding: 15px 30px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-.lang-switch button {
-  margin: 0 5px;
-  font-weight: bold;
-  padding: 5px 10px;
-  cursor: pointer;
-  background: white;
-  border: 1px solid #ccc;
+.logo {
+  height: 55px;
 }
 
-main#hero {
+/* ---------- SOCIALS ---------- */
+.socials {
   text-align: center;
-  padding: 100px 20px;
-}
-
-h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.btn, .btn-outline {
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 10px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-  color: white;
-  background: #adbba5;
-}
-
-.btn-outline {
-  background: transparent;
-  border: 2px solid #adbba5;
-  color: #4a3e36;
-}
-
-footer {
-  text-align: center;
-  padding: 30px;
-  background: #f8f4ec;
 }
 
 .socials a {
   margin: 0 10px;
-  font-size: 24px;
+  font-size: 18px;
+  color: #4a3e36;
+  text-decoration: none;
+}
+
+/* ---------- LANG ---------- */
+.lang-switch button {
+  margin-left: 8px;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background: transparent;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 14px 30px;
+  margin: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn.primary {
+  background: #adbba5;
+  color: white;
+}
+
+.btn.outline {
+  border: 2px solid #adbba5;
   color: #4a3e36;
 }
 
-#services {
-  padding: 40px 20px;
-  max-width: 800px;
+/* ---------- PAGE SECTIONS ---------- */
+section {
+  max-width: 900px;
   margin: auto;
+  padding: 80px 20px;
 }
 
-.accordion-box {
-  margin-bottom: 20px;
+section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* ---------- SERVICES ---------- */
+.service-box {
   border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-.accordion-btn {
-  width: 100%;
-  text-align: left;
-  padding: 15px;
-  font-size: 18px;
-  font-weight: bold;
+.service-title {
+  padding: 18px;
   background: #f8f4ec;
-  border: none;
   cursor: pointer;
+  font-weight: bold;
 }
 
-.accordion-content {
+.service-content {
   display: none;
-  padding: 15px;
-  background-color: #fff;
+  padding: 18px;
+  background: white;
 }
 
-.accordion-content p {
-  margin: 10px 0;
-  border-bottom: 1px solid #eee;
+.service-content p {
+  margin: 8px 0;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #f8f4ec;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+/* ---------- MAP ---------- */
+.map {
+  width: 100%;
+  height: 350px;
+  border: none;
 }
