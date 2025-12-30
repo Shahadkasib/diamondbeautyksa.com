@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Diamond Beauty</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
@@ -16,12 +16,11 @@
 </head>
 <body>
 
-<!-- TOP BAR (VISIBLE) -->
+<!-- ================= STICKY TOP BAR ================= -->
 <header class="topbar">
+  <div class="topbar-content">
 
-  <!-- Top row -->
-  <div class="topbar-row">
-    <div class="socials">
+    <div class="top-icons">
       <a href="#"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fab fa-tiktok"></i></a>
       <a href="#"><i class="fab fa-snapchat"></i></a>
@@ -31,24 +30,27 @@
       <button onclick="setLang('en')">EN</button>
       <button onclick="setLang('ar')">AR</button>
     </div>
-  </div>
 
-  <!-- Logo row -->
-  <div class="logo-row">
-    <img src="logo.png" alt="Diamond Beauty Logo" class="logo">
   </div>
-
 </header>
 
-<!-- HERO -->
-<main class="hero">
-  <h1>Luxury, Redefined</h1>
+<!-- ================= LOGO SECTION ================= -->
+<section class="logo-section">
+  <img src="logo.png" alt="Diamond Beauty Logo" class="logo">
+</section>
 
-  <p class="about">
-    Once a small neighborhood salon in Ar Rawdah, Diamond Beauty grew with love,
-    trust, and dedication. With over 20 years of experience, we are proud to open
-    our doors today, bringing refined beauty, care, and expertise to every woman
-    who walks in.
+<!-- ================= HERO ================= -->
+<main class="hero">
+  <h1
+    data-en="Luxury, Redefined"
+    data-ar="الفخامة، كما يجب أن تكون">
+    Luxury, Redefined
+  </h1>
+
+  <p class="about"
+     data-en="Once a small neighborhood salon in Ar Rawdah, Diamond Beauty grew with love, trust, and dedication. With over 20 years of experience, we are proud to open our doors today, bringing refined beauty, care, and expertise to every woman who walks in."
+     data-ar="بدأت دايموند بيوتي كصالون صغير في حي الروضة، ونمت بمحبة وثقة واهتمام. بخبرة تتجاوز 20 عاماً، نفخر اليوم بافتتاح أبوابنا لنقدم الجمال الراقي والعناية والخبرة لكل امرأة تزورنا.">
+    Once a small neighborhood salon in Ar Rawdah, Diamond Beauty grew with love, trust, and dedication. With over 20 years of experience, we are proud to open our doors today, bringing refined beauty, care, and expertise to every woman who walks in.
   </p>
 
   <div class="actions">
