@@ -1,32 +1,39 @@
 :root{
   --bg: #fffdf8;
+  --bar: #f4f1ea;
   --text: #4a3e36;
   --muted: #6a5c52;
   --accent: #adbba5;
-  --footer: #f4f1ea;
 }
 
-*{ margin:0; padding:0; box-sizing:border-box; }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
 body{
   background: var(--bg);
   color: var(--text);
   font-family: "Georgia", serif;
 }
 
-/* TOPBAR */
+/* =========================
+   TOP BAR (NOW OBVIOUS)
+========================= */
 .topbar{
-  padding: 14px 22px 0;
-  text-align: center;
+  background: var(--bar);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding: 12px 24px 18px;
 }
 
-/* Top row (socials + language) */
-.topbar-inner{
-  width: 100%;
+/* First row */
+.topbar-row{
   display:flex;
   justify-content:center;
   align-items:center;
   position:relative;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .socials{
@@ -35,159 +42,127 @@ body{
 }
 
 .socials a{
+  font-size:18px;
   color: var(--text);
-  font-size: 18px;
-  opacity: .9;
-  transition: transform .2s ease, opacity .2s ease;
-}
-.socials a:hover{
-  transform: translateY(-2px);
-  opacity: 1;
+  opacity:.9;
 }
 
-/* Language on the right */
 .lang-switch{
   position:absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  right:0;
   display:flex;
   gap:8px;
 }
 
 .lang-switch button{
-  border: 1px solid var(--text);
-  background: transparent;
-  padding: 6px 14px;
-  border-radius: 999px;
-  cursor: pointer;
-  font-size: 12px;
+  background:none;
+  border:1px solid var(--text);
+  padding:6px 14px;
+  border-radius:999px;
+  font-size:12px;
+  cursor:pointer;
 }
 
-/* Logo area */
-.logo-wrap{
-  width:100%;
+/* Logo row */
+.logo-row{
   display:flex;
   justify-content:center;
-  align-items:center;
-  padding: 6px 0 0; /* VERY SMALL spacing */
 }
 
 .logo{
-  display:block;
-  width: auto;           /* IMPORTANT: not 100% */
-  max-width: 520px;      /* adjust bigger/smaller */
-  height: auto;
+  max-width: 420px;
+  width:auto;
+  height:auto;
 }
 
-/* HERO */
+/* =========================
+   HERO (STARTS AFTER BAR)
+========================= */
 .hero{
   text-align:center;
-  padding: 30px 20px 70px; /* reduced top spacing so logo feels on top */
+  padding: 50px 20px 80px;
 }
 
-.title{
-  font-size: 44px;
-  margin-top: 10px;
-  margin-bottom: 18px;
-  letter-spacing: .3px;
+.hero h1{
+  font-size:44px;
+  margin-bottom:18px;
 }
 
 .about{
-  max-width: 720px;
-  margin: 0 auto 38px;
-  font-size: 16px;
-  line-height: 1.9;
+  max-width:720px;
+  margin:0 auto 38px;
+  font-size:16px;
+  line-height:1.9;
   color: var(--muted);
 }
 
 .actions{
   display:flex;
   justify-content:center;
-  gap: 18px;
-  flex-wrap: wrap;
+  gap:18px;
 }
 
 .btn{
+  padding:14px 38px;
+  border-radius:999px;
   text-decoration:none;
-  padding: 14px 38px;
-  border-radius: 999px;
-  font-weight: 600;
-  display:inline-block;
+  font-weight:600;
 }
 
 .primary{
   background: var(--accent);
-  color: #fff;
+  color:#fff;
 }
+
 .outline{
-  border: 2px solid var(--accent);
+  border:2px solid var(--accent);
   color: var(--text);
 }
 
-/* Floating buttons */
+/* =========================
+   FLOATING BUTTONS
+========================= */
 .float{
   position:fixed;
-  right: 22px;
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
+  right:22px;
+  width:54px;
+  height:54px;
+  border-radius:50%;
   display:flex;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
   color:#fff;
-  font-size: 22px;
-  z-index: 999;
-  box-shadow: 0 10px 22px rgba(0,0,0,.12);
+  font-size:22px;
+  z-index:999;
 }
-.whatsapp{ bottom: 95px; background:#25D366; }
-.call{ bottom: 25px; background: var(--text); }
 
-/* Footer */
-.footer{
-  background: var(--footer);
+.whatsapp{ bottom:95px; background:#25D366; }
+.call{ bottom:25px; background: var(--text); }
+
+/* =========================
+   FOOTER
+========================= */
+footer{
+  background: var(--bar);
   text-align:center;
-  padding: 38px 18px;
+  padding:40px 20px;
 }
 
 .map-btn{
   display:inline-block;
-  margin-bottom: 14px;
-  padding: 12px 30px;
-  border-radius: 999px;
-  border: 1px solid var(--accent);
+  margin-bottom:14px;
+  padding:12px 30px;
+  border-radius:999px;
+  border:1px solid var(--accent);
   color: var(--text);
   text-decoration:none;
 }
 
-/* Animations */
-.fadeUp{
-  opacity:0;
-  transform: translateY(18px);
-  animation: fadeUp 1s ease forwards;
-}
-
-.fadeDown{
-  opacity:0;
-  transform: translateY(-14px);
-  animation: fadeDown 1s ease forwards;
-}
-
-.delay1{ animation-delay: .25s; }
-.delay2{ animation-delay: .55s; }
-.delay3{ animation-delay: .85s; }
-
-@keyframes fadeUp{ to{ opacity:1; transform: translateY(0); } }
-@keyframes fadeDown{ to{ opacity:1; transform: translateY(0); } }
-
-/* Arabic mode */
-body[dir="rtl"]{
-  direction: rtl;
-  font-family: "Cairo", sans-serif;
-}
-
-/* Mobile */
-@media (max-width: 768px){
-  .logo{ max-width: 320px; }
-  .title{ font-size: 32px; }
+/* =========================
+   MOBILE
+========================= */
+@media(max-width:768px){
+  .logo{ max-width:280px; }
+  .hero h1{ font-size:32px; }
+  .actions{ flex-direction:column; }
 }
