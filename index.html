@@ -4,38 +4,66 @@
   <meta charset="UTF-8">
   <title>Diamond Beauty</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=The+Seasons&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <div class="navbar">
-    <img src="logo.png" class="logo">
-
-    <div class="socials">
-      <a href="https://instagram.com/diamondbeautyksa" target="_blank">IG</a>
-      <a href="https://tiktok.com/@diamondbeauty" target="_blank">TT</a>
-      <a href="https://snapchat.com/add/diamondbeauty" target="_blank">SC</a>
-    </div>
-
-    <div class="lang-switch">
-      <button id="en">EN</button>
-      <button id="ar">AR</button>
-    </div>
-  </div>
-</header>
-
-<div class="hero">
-  <h1 data-en="Luxury, Redefined" data-ar="الفخامة، بإعادة تعريفها">Luxury, Redefined</h1>
-  <a href="services.html" class="btn primary" data-en="View Services" data-ar="عرض الخدمات">View Services</a>
-  <a href="booking.html" class="btn outline" data-en="Book Now" data-ar="احجزي الآن">Book Now</a>
+<!-- TOP SOCIAL ICONS -->
+<div class="top-socials">
+  <a href="https://instagram.com/diamondbeautyksa" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://tiktok.com/@diamondbeauty" target="_blank"><i class="fab fa-tiktok"></i></a>
+  <a href="https://snapchat.com/add/diamondbeauty" target="_blank"><i class="fab fa-snapchat"></i></a>
 </div>
 
+<!-- HERO -->
+<section class="hero">
+
+  <img src="logo.png" class="logo" alt="Diamond Beauty Logo">
+
+  <h1 class="slogan">Luxury, Redefined</h1>
+
+  <p class="about-text">
+    Once a small neighborhood salon in Ar Rawdah, Diamond Beauty grew with love,
+    trust, and dedication. With over 20 years of experience, we are proud to open
+    our doors today, bringing refined beauty, care, and expertise to every woman
+    who walks in.
+  </p>
+
+  <div class="buttons">
+    <a href="services.pdf" target="_blank" class="btn primary">
+      View Services
+    </a>
+
+    <a href="https://www.fresha.com/a/diamond-beauty-lms-jeddah-al-batarji-sqgh6t9j"
+       target="_blank"
+       class="btn outline">
+      Book Now
+    </a>
+  </div>
+
+</section>
+
+<!-- FLOATING BUTTONS -->
+<a href="https://wa.me/966XXXXXXXXX" class="float whatsapp" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<a href="tel:+966XXXXXXXXX" class="float call">
+  <i class="fas fa-phone"></i>
+</a>
+
+<!-- FOOTER -->
 <footer>
   © 2025 Diamond Beauty
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
