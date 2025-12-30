@@ -15,7 +15,7 @@ body {
 /* TOP BAR */
 .top-bar {
   position: relative;
-  padding: 25px 30px;
+  padding: 15px 30px; /* less vertical push */
 }
 
 /* Socials - center */
@@ -53,17 +53,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* 👈 key change */
   text-align: center;
-  padding: 20px;
+  padding-top: 40px;           /* controlled top spacing */
+  padding-bottom: 40px;
 }
-
 /* LOGO */
 .logo {
   max-width: 480px;
   width: 100%;
   height: auto;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  margin-top: -10px; /* 👈 subtle lift */
 }
 
 /* TEXT */
