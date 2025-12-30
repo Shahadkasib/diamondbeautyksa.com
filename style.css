@@ -92,37 +92,56 @@ section h2 {
 }
 
 /* ---------- SERVICES ---------- */
-.service-box {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  margin-bottom: 20px;
+.services-page {
+  max-width: 900px;
+  margin: auto;
+  padding: 80px 20px;
 }
 
-.service-title {
-  padding: 18px;
-  background: #f8f4ec;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.service-content {
-  display: none;
-  padding: 18px;
-  background: white;
-}
-
-.service-content p {
-  margin: 8px 0;
-}
-
-/* ---------- FOOTER ---------- */
-footer {
-  background: #f8f4ec;
+.services-page h1 {
   text-align: center;
-  padding: 40px 20px;
-  font-size: 14px;
+  margin-bottom: 60px;
+  font-size: 40px;
 }
 
+.service-card {
+  background: white;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.service-header {
+  width: 100%;
+  padding: 22px;
+  background: #f4f1ea;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+}
+
+.service-body {
+  display: none;
+  padding: 25px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed #e5e0d8;
+  font-size: 15px;
+}
+
+.sub-title {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
 /* ---------- MAP ---------- */
 .map {
   width: 100%;
