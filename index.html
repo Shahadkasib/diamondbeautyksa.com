@@ -5,7 +5,7 @@
   <title>Diamond Beauty</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Font -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=The+Seasons&display=swap" rel="stylesheet">
 
   <!-- Icons -->
@@ -24,39 +24,48 @@
     <a href="https://snapchat.com/add/diamondbeauty" target="_blank"><i class="fab fa-snapchat"></i></a>
   </div>
 
-  <a href="https://www.fresha.com/a/diamond-beauty-lms-jeddah-al-batarji-sqgh6t9j"
-     target="_blank"
-     class="top-book">
-    Book Now
-  </a>
+  <div class="lang-switch">
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('ar')">AR</button>
+  </div>
 </div>
 
 <!-- HERO -->
 <section class="hero">
 
-  <img src="logo.png" alt="Diamond Beauty Logo" class="logo">
+  <img src="logo.png" class="logo" alt="Diamond Beauty Logo">
 
-  <h1>Luxury, Redefined</h1>
+  <h1 data-en="Luxury, Redefined"
+      data-ar="الفخامة، كما يجب أن تكون">
+    Luxury, Redefined
+  </h1>
 
-  <p class="about">
-    Once a small neighborhood salon in Ar Rawdah, Diamond Beauty grew with love,
-    trust, and dedication. With over 20 years of experience, we are proud to open
-    our doors today, bringing refined beauty, care, and expertise to every woman
-    who walks in.
+  <p class="about"
+     data-en="Once a small neighborhood salon in Ar Rawdah, Diamond Beauty grew with love, trust, and dedication. With over 20 years of experience, we are proud to open our doors today, bringing refined beauty, care, and expertise to every woman who walks in."
+     data-ar="بدأت دايموند بيوتي كصالون صغير في حي الروضة، ونمت بمحبة وثقة واهتمام. بخبرة تتجاوز 20 عاماً، نفخر اليوم بافتتاح أبوابنا لنقدم الجمال الراقي والعناية والخبرة لكل امرأة تزورنا.">
+    Once a small neighborhood salon in Ar Rawdah, Diamond Beauty grew with love, trust, and dedication. With over 20 years of experience, we are proud to open our doors today, bringing refined beauty, care, and expertise to every woman who walks in.
   </p>
 
   <div class="actions">
-    <a href="services.pdf" target="_blank" class="btn primary">View Services</a>
+    <a href="services.pdf" target="_blank"
+       class="btn primary"
+       data-en="View Services"
+       data-ar="عرض الخدمات">
+      View Services
+    </a>
+
     <a href="https://www.fresha.com/a/diamond-beauty-lms-jeddah-al-batarji-sqgh6t9j"
        target="_blank"
-       class="btn outline">
+       class="btn outline"
+       data-en="Book Now"
+       data-ar="احجزي الآن">
       Book Now
     </a>
   </div>
 
 </section>
 
-<!-- FLOATING -->
+<!-- FLOATING BUTTONS -->
 <a href="https://wa.me/966XXXXXXXXX" class="float whatsapp" target="_blank">
   <i class="fab fa-whatsapp"></i>
 </a>
@@ -69,5 +78,6 @@
   © 2025 Diamond Beauty
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
