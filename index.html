@@ -1,80 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Diamond Beauty</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
   <!-- Icons -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- ================= STICKY TOP BAR ================= -->
+<!-- ================= TOP BAR ================= -->
 <header class="top-bar">
-  <div class="top-left">
-    <a href="https://www.instagram.com/diamond_beautysal0n?igsh=bjBwZjExaTF1MWJ1" target="_blank" aria-label="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://www.tiktok.com/@diamondbeautybyhh?_r=1&_t=ZS-92b8JekKRlp" target="_blank" aria-label="TikTok">
-      <i class="fab fa-tiktok"></i>
-    </a>
-    <a href="https://snapchat.com/t/ijkay9Ck" target="_blank" aria-label="Snapchat">
-      <i class="fab fa-snapchat-ghost"></i>
-    </a>
+  <div class="socials">
+    <a href="https://www.instagram.com/diamond_beautysal0n?igsh=bjBwZjExaTF1MWJ1" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@diamondbeautybyhh?_r=1&_t=ZS-92b8JekKRlp" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://snapchat.com/t/ijkay9Ck" target="_blank"><i class="fab fa-snapchat"></i></a>
   </div>
 
-  <div class="top-right">
-    <button class="lang-btn">EN</button>
-    <button class="lang-btn">AR</button>
+  <div class="lang">
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('ar')">AR</button>
   </div>
 </header>
 
-<!-- ================= LOGO SECTION ================= -->
+<!-- ================= LOGO ================= -->
 <section class="logo-section">
-  <img src="logo.png" alt="Diamond Beauty Logo" class="logo">
+  <img src="logo.png" alt="Diamond Beauty Logo" class="logo animate-logo">
 </section>
 
-<!-- ================= HERO ================= -->
-<main class="hero">
-  <h1
-    data-en="Luxury, Redefined"
-    data-ar="الفخامة، كما يجب أن تكون">
-    Luxury, Redefined
-  </h1>
+<!-- ================= HERO CONTENT ================= -->
+<main class="content">
+  <h1 id="title">Luxury, Redefined</h1>
 
-  <p class="about"
-     data-en="Once a small neighborhood salon in Ar Rawdah, Diamond Beauty grew with love, trust, and dedication. With over 20 years of experience, we are proud to open our doors today, bringing refined beauty, care, and expertise to every woman who walks in."
-     data-ar="بدأت دايموند بيوتي كصالون صغير في حي الروضة، ونمت بمحبة وثقة واهتمام. بخبرة تتجاوز 20 عاماً، نفخر اليوم بافتتاح أبوابنا لنقدم الجمال الراقي والعناية والخبرة لكل امرأة تزورنا.">
-    Once a small neighborhood salon in Ar Rawdah, Diamond Beauty grew with love, trust, and dedication. With over 20 years of experience, we are proud to open our doors today, bringing refined beauty, care, and expertise to every woman who walks in.
+  <p id="desc">
+    Once a small neighborhood salon in Ar Rawdah, Diamond Beauty grew with love,
+    trust, and dedication. With over 20 years of experience, we are proud to open
+    our doors today, bringing refined beauty, care, and expertise to every woman
+    who walks in.
   </p>
 
-  <div class="actions">
-    <a href="services.pdf" target="_blank" class="btn primary">View Services</a>
-    <a href="https://www.fresha.com/a/diamond-beauty-lms-jeddah-al-batarji-sqqh6t9j/booking?menu=true&pId=2707608&dppub=true&utm_campaign=instagram-fbe&utm_medium=book-now-button&utm_source=instagram&utm_term=2707608" target="_blank" class="btn outline">Book Now</a>
+  <div class="buttons">
+    <a href="services.pdf" class="btn primary" id="servicesBtn">View Services</a>
+    <a href="https://www.fresha.com/a/diamond-beauty-lms-jeddah-al-batarji-sqqh6t9j/booking?menu=true&pId=2707608&dppub=true&utm_campaign=instagram-fbe&utm_medium=book-now-button&utm_source=instagram&utm_term=2707608" target="_blank" class="btn outline" id="bookBtn">Book Now</a>
   </div>
 </main>
 
-<!-- FLOATING BUTTONS -->
-<a class="float whatsapp" href="#"><i class="fab fa-whatsapp"></i></a>
-<a href="https://wa.me/966501234567" class="float-btn whatsapp" target="_blank">
-<a class="float call" href="#"><i class="fas fa-phone"></i></a>
-<a href="tel:+966501234567" class="float-btn phone">
+<!-- ================= FLOATING BUTTONS ================= -->
+<a href="https://wa.me/966532599970" class="float whatsapp" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
-<!-- FOOTER -->
+<a href="tel:+966532599970" class="float call">
+  <i class="fas fa-phone"></i>
+</a>
+
+<!-- ================= FOOTER ================= -->
 <footer>
-  <a href="https://maps.app.goo.gl/jFHEoEbReiWC4MVT9"
-     target="_blank"
-     class="map-btn">
-    View Location on Google Maps
+  <a href="https://maps.app.goo.gl/jFHEoEbReiWC4MVT9" target="_blank">
+    📍 View Location on Google Maps
   </a>
-  <p>© 2025 Diamond Beauty</p>
 </footer>
 
 <script src="script.js"></script>
