@@ -49,22 +49,21 @@ body {
 
 /* HERO */
 .hero {
-  min-height: calc(100vh - 120px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* 👈 key change */
   text-align: center;
-  padding-top: 40px;           /* controlled top spacing */
-  padding-bottom: 40px;
+  padding-top: 20px;     /* 👈 close to top */
+  padding-bottom: 80px;
 }
+
 /* LOGO */
 .logo {
   max-width: 480px;
   width: 100%;
   height: auto;
-  margin-bottom: 20px;
-  margin-top: -10px; /* 👈 subtle lift */
+  margin-top: 0;
+  margin-bottom: 25px;
 }
 
 /* TEXT */
@@ -150,4 +149,22 @@ body[dir="rtl"] {
   .logo { max-width: 300px; }
   h1 { font-size: 32px; }
   .actions { flex-direction: column; }
+}
+
+/* ANIMATIONS */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.5s; }
+.delay-3 { animation-delay: 0.8s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
