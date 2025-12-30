@@ -8,6 +8,6 @@ function setLang(lang) {
   localStorage.setItem("lang", lang);
 }
 
-window.addEventListener("load", () => {
+window.onload = () => {
   setLang(localStorage.getItem("lang") || "en");
-});
+};
