@@ -1,150 +1,165 @@
+/* ================================
+   GLOBAL RESET
+================================ */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+/* ================================
+   BASE STYLES
+================================ */
 body {
-  margin: 0;
   font-family: 'The Seasons', serif;
-  background: #fffdf8 url("background.jpg") no-repeat center/cover;
+  background-color: #fffdf8;
   color: #4a3e36;
-  scroll-behavior: smooth;
+  line-height: 1.6;
 }
 
-/* ---------- HEADER ---------- */
-header {
-  background: rgba(255,255,255,0.95);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  padding: 15px 40px;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.navbar {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-}
-
-.logo {
-  height: 55px;
-}
-
-/* ---------- SOCIALS ---------- */
-.socials {
+/* ================================
+   HEADER
+================================ */
+.services-header {
   text-align: center;
+  padding: 40px 20px 25px;
+  border-bottom: 1px solid #eee;
 }
 
-.socials a {
-  margin: 0 10px;
+.logo-center {
+  height: 85px;
+  margin-bottom: 15px;
+}
+
+/* ================================
+   SOCIAL ICONS
+================================ */
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 12px;
   font-size: 18px;
   color: #4a3e36;
-  text-decoration: none;
+  transition: opacity 0.3s ease;
 }
 
-/* ---------- LANG ---------- */
-.lang-switch button {
-  margin-left: 8px;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  background: transparent;
-  cursor: pointer;
-  font-weight: bold;
+.social-icons a:hover {
+  opacity: 0.6;
 }
 
-/* ---------- HERO ---------- */
-.hero {
-  text-align: center;
-  padding: 120px 20px;
+/* ================================
+   CATEGORY NAVIGATION
+================================ */
+.category-nav {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  padding: 25px 20px;
+  flex-wrap: wrap;
 }
 
-.hero h1 {
-  font-size: 42px;
-  margin-bottom: 30px;
+.category-nav a {
+  background-color: #f4f1ea;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  transition: all 0.3s ease;
 }
 
-.btn {
-  padding: 14px 30px;
-  margin: 10px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-}
-
-.btn.primary {
-  background: #adbba5;
+.category-nav a:hover {
+  background-color: #adbba5;
   color: white;
 }
 
-.btn.outline {
-  border: 2px solid #adbba5;
-  color: #4a3e36;
-}
-
-/* ---------- PAGE SECTIONS ---------- */
-section {
+/* ================================
+   SERVICES CONTAINER
+================================ */
+.services-container {
   max-width: 900px;
   margin: auto;
-  padding: 80px 20px;
+  padding: 60px 20px;
 }
 
-section h2 {
+/* ================================
+   SERVICE SECTIONS
+================================ */
+.service-section {
+  margin-bottom: 80px;
+}
+
+.service-section h2 {
   text-align: center;
-  margin-bottom: 40px;
+  font-size: 28px;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
 }
 
-/* ---------- SERVICES ---------- */
-.services-page {
-  max-width: 900px;
-  margin: auto;
-  padding: 80px 20px;
+/* ================================
+   SERVICE BOX
+================================ */
+.service-box {
+  background-color: white;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-.services-page h1 {
-  text-align: center;
-  margin-bottom: 60px;
-  font-size: 40px;
-}
-
-.service-card {
-  background: white;
-  border-radius: 16px;
-  margin-bottom: 25px;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-}
-
-.service-header {
-  width: 100%;
-  padding: 22px;
-  background: #f4f1ea;
-  border: none;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: left;
-  cursor: pointer;
-}
-
-.service-body {
-  display: none;
-  padding: 25px;
-}
-
-.price-row {
+/* ================================
+   SERVICE ROWS
+================================ */
+.row {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px dashed #e5e0d8;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px dashed #e5dfd6;
   font-size: 15px;
 }
 
-.sub-title {
-  margin-top: 25px;
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-size: 16px;
+.row span:last-child {
+  font-weight: 500;
 }
-/* ---------- MAP ---------- */
-.map {
-  width: 100%;
-  height: 350px;
-  border: none;
+
+.row:last-child {
+  border-bottom: none;
+}
+
+/* ================================
+   FOOTER
+================================ */
+.services-footer {
+  text-align: center;
+  padding: 35px 20px;
+  background-color: #f4f1ea;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+
+  .logo-center {
+    height: 70px;
+  }
+
+  .service-section h2 {
+    font-size: 24px;
+  }
+
+  .row {
+    font-size: 14px;
+  }
+
+  .category-nav {
+    gap: 10px;
+  }
 }
