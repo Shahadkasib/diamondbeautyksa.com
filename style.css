@@ -158,3 +158,21 @@ footer a {
   color: #4a453f;
   text-decoration: none;
 }
+
+/* ================= LOCATION BUTTON ================= */
+.location-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: 1px solid #aeb8a3;
+  background: transparent;
+  color: #4a453f;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.location-btn:hover {
+  background: #aeb8a3;
+  color: white;
+}
