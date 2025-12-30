@@ -1,55 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services – Diamond Beauty</title>
+  <meta charset="UTF-8">
+  <title>Services & Prices | Diamond Beauty</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=The+Seasons&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <nav>
-      <a href="index.html">
-        <img src="logo.png" alt="Diamond Beauty Logo" class="logo" />
-      </a>
-      <div class="lang-switch">
-        <button id="en-btn">EN</button>
-        <button id="ar-btn">AR</button>
-      </div>
-    </nav>
-  </header>
+<header class="simple-header">
+  <a href="index.html"><img src="logo.png" class="logo"></a>
+</header>
 
-  <main id="services">
-    <h2 data-en="Our Services" data-ar="خدماتنا">Our Services</h2>
+<section class="services-page">
+  <h1 data-en="Our Services & Prices" data-ar="خدماتنا وأسعارنا">Our Services & Prices</h1>
 
-    <!-- Hair Services -->
-    <div class="accordion-box">
-      <button class="accordion-btn" data-en="Hair Services" data-ar="خدمات الشعر">Hair Services</button>
-      <div class="accordion-content">
-        <p><span data-en="Ends Trim" data-ar="قص الأطراف">Ends Trim</span> – 100 SAR</p>
-        <p><span data-en="Full Haircut" data-ar="قص كامل">Full Haircut</span> – 150–230 SAR</p>
-        <p><span data-en="Bangs Cut" data-ar="قص غرة">Bangs Cut</span> – 50 SAR</p>
-        <p><span data-en="Hair Repair" data-ar="ترميم الشعر">Hair Repair</span> – 75 SAR</p>
-        <p><span data-en="Hair Detox" data-ar="ديتوكس الشعر">Hair Detox</span> – 150 SAR</p>
-        <p><span data-en="Moisturizing Mask" data-ar="ماسك مرطب">Moisturizing Mask</span> – 150–350 SAR</p>
-        <p><span data-en="Botox Treatment" data-ar="علاج بوتوكس">Botox Treatment</span> – 500–1,700 SAR</p>
-        <p><span data-en="Protein Treatment" data-ar="علاج بروتين">Protein Treatment</span> – 700–1,900 SAR</p>
-        <p><span data-en="Root Color" data-ar="صبغة الجذور">Root Color</span> – 300 SAR</p>
-        <p><span data-en="Toner" data-ar="رنساج">Toner</span> – 500 SAR</p>
-        <p><span data-en="Single Color" data-ar="صبغة بلون واحد">Single Color</span> – 600–800 SAR</p>
-      </div>
+  <!-- HAIR SERVICES -->
+  <div class="service-card">
+    <button class="service-header" data-en="Hair Services" data-ar="خدمات الشعر">Hair Services</button>
+    <div class="service-body">
+
+      <div class="price-row"><span>Ends Trim</span><span>100 SAR</span></div>
+      <div class="price-row"><span>Full Haircut</span><span>150 – 230 SAR</span></div>
+      <div class="price-row"><span>Bangs Cut</span><span>50 SAR</span></div>
+      <div class="price-row"><span>Hair Repair</span><span>75 SAR</span></div>
+      <div class="price-row"><span>Hair Detox</span><span>150 SAR</span></div>
+      <div class="price-row"><span>Moisturizing Mask</span><span>150 – 350 SAR</span></div>
+      <div class="price-row"><span>Botox Treatment</span><span>500 – 1,700 SAR</span></div>
+      <div class="price-row"><span>Protein Treatment</span><span>700 – 1,900 SAR</span></div>
+
+      <div class="sub-title">Color</div>
+      <div class="price-row"><span>Root Color</span><span>230 – 300 SAR</span></div>
+      <div class="price-row"><span>Toner</span><span>230 – 345 SAR</span></div>
+      <div class="price-row"><span>Single Color</span><span>300 – 800 SAR</span></div>
+
+      <div class="sub-title">Braids</div>
+      <div class="price-row"><span>One Braid</span><span>20 SAR</span></div>
+      <div class="price-row"><span>Two Braids</span><span>40 SAR</span></div>
+      <div class="price-row"><span>French / Dutch Braids</span><span>60 SAR</span></div>
+      <div class="price-row"><span>Multiple Braids</span><span>120 SAR</span></div>
+      <div class="price-row"><span>Braids with Extensions</span><span>200 SAR</span></div>
+      <div class="price-row"><span>Full Braided Hairstyle</span><span>400 SAR</span></div>
+
     </div>
+  </div>
 
-    <!-- Add other categories here... -->
+  <!-- BLOW DRY -->
+  <div class="service-card">
+    <button class="service-header" data-en="Blow-Dry & Hairstyling" data-ar="السشوار وتصفيف الشعر">
+      Blow-Dry & Hairstyling
+    </button>
+    <div class="service-body">
 
-  </main>
+      <div class="sub-title">Classic Blow-Dry</div>
+      <div class="price-row"><span>Short</span><span>70 SAR</span></div>
+      <div class="price-row"><span>Medium</span><span>150 SAR</span></div>
+      <div class="price-row"><span>Long</span><span>200 SAR</span></div>
+      <div class="price-row"><span>Extra-Long</span><span>250 SAR</span></div>
 
-  <footer>
-    <p>&copy; 2025 Diamond Beauty</p>
-  </footer>
+      <div class="sub-title">Wavy Blow-Dry</div>
+      <div class="price-row"><span>Short</span><span>90 SAR</span></div>
+      <div class="price-row"><span>Medium</span><span>170 SAR</span></div>
+      <div class="price-row"><span>Long</span><span>220 SAR</span></div>
+      <div class="price-row"><span>Extra-Long</span><span>270 SAR</span></div>
 
-  <script src="script.js"></script>
+      <div class="sub-title">Hairstyling</div>
+      <div class="price-row"><span>Open Hairstyle</span><span>180 – 350 SAR</span></div>
+      <div class="price-row"><span>Updo</span><span>200 – 370 SAR</span></div>
+
+    </div>
+  </div>
+
+  <!-- NAILS -->
+  <div class="service-card">
+    <button class="service-header" data-en="Nail Services" data-ar="خدمات الأظافر">Nail Services</button>
+    <div class="service-body">
+
+      <div class="price-row"><span>Manicure</span><span>70 SAR</span></div>
+      <div class="price-row"><span>Classic Pedicure</span><span>80 SAR</span></div>
+      <div class="price-row"><span>Diamond Pedicure</span><span>150 SAR</span></div>
+      <div class="price-row"><span>Moroccan Pedicure</span><span>150 SAR</span></div>
+      <div class="price-row"><span>Nail Extensions</span><span>100 SAR</span></div>
+      <div class="price-row"><span>Gel Polish</span><span>100 SAR</span></div>
+      <div class="price-row"><span>Nail Art (per nail)</span><span>10 – 50 SAR</span></div>
+
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  © 2025 Diamond Beauty
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
