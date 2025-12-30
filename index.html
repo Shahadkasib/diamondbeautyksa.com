@@ -1,78 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Diamond Beauty</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=The+Seasons&family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Icons -->
   <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<!-- TOP AREA -->
-<header class="top-area">
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="topbar-inner">
 
-  <!-- Social icons -->
-  <div class="top-socials">
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-tiktok"></i></a>
-    <a href="#"><i class="fab fa-snapchat"></i></a>
-  </div>
+      <!-- Social icons -->
+      <nav class="socials" aria-label="Social media">
+        <a href="https://instagram.com/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://tiktok.com/" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://snapchat.com/" target="_blank" aria-label="Snapchat"><i class="fa-brands fa-snapchat"></i></a>
+      </nav>
 
-  <!-- Language -->
-  <div class="lang-switch">
-    <button onclick="setLang('en')">EN</button>
-    <button onclick="setLang('ar')">AR</button>
-  </div>
+      <!-- Language switch -->
+      <div class="lang-switch">
+        <button type="button" onclick="setLang('en')">EN</button>
+        <button type="button" onclick="setLang('ar')">AR</button>
+      </div>
 
-  <!-- LOGO (NOW REALLY ON TOP) -->
-  <img src="logo.png" class="logo fade-down" alt="Diamond Beauty Logo">
+    </div>
 
-</header>
+    <!-- LOGO (NOW REALLY TOP + CENTER) -->
+    <div class="logo-wrap">
+      <img src="logo.png" alt="Diamond Beauty Logo" class="logo fadeDown" />
+    </div>
+  </header>
 
-<!-- HERO CONTENT -->
-<section class="hero">
+  <!-- HERO -->
+  <main class="hero">
+    <h1 class="title fadeUp delay1"
+        data-en="Luxury, Redefined"
+        data-ar="الفخامة، كما يجب أن تكون">
+      Luxury, Redefined
+    </h1>
 
-  <h1 class="fade-up delay-1"
-      data-en="Luxury, Redefined"
-      data-ar="الفخامة، كما يجب أن تكون">
-    Luxury, Redefined
-  </h1>
+    <p class="about fadeUp delay2"
+       data-en="Once a small neighborhood salon in Ar Rawdah, Diamond Beauty grew with love, trust, and dedication. With over 20 years of experience, we are proud to open our doors today, bringing refined beauty, care, and expertise to every woman who walks in."
+       data-ar="بدأت دايموند بيوتي كصالون صغير في حي الروضة، ونمت بمحبة وثقة واهتمام. بخبرة تتجاوز 20 عاماً، نفخر اليوم بافتتاح أبوابنا لنقدم الجمال الراقي والعناية والخبرة لكل امرأة تزورنا.">
+      Once a small neighborhood salon in Ar Rawdah, Diamond Beauty grew with love, trust, and dedication. With over 20 years of experience, we are proud to open our doors today, bringing refined beauty, care, and expertise to every woman who walks in.
+    </p>
 
-  <p class="about fade-up delay-2"
-     data-en="Once a small neighborhood salon in Ar Rawdah, Diamond Beauty grew with love, trust, and dedication. With over 20 years of experience, we are proud to open our doors today, bringing refined beauty, care, and expertise to every woman who walks in."
-     data-ar="بدأت دايموند بيوتي كصالون صغير في حي الروضة، ونمت بمحبة وثقة واهتمام. بخبرة تتجاوز 20 عاماً، نفخر اليوم بافتتاح أبوابنا لنقدم الجمال الراقي والعناية والخبرة لكل امرأة تزورنا.">
-    Once a small neighborhood salon in Ar Rawdah, Diamond Beauty grew with love, trust, and dedication. With over 20 years of experience, we are proud to open our doors today, bringing refined beauty, care, and expertise to every woman who walks in.
-  </p>
+    <div class="actions fadeUp delay3">
+      <!-- View Services opens a PDF -->
+      <a class="btn primary" href="services.pdf" target="_blank"
+         data-en="View Services" data-ar="عرض الخدمات والأسعار">
+        View Services
+      </a>
 
-  <div class="actions fade-up delay-3">
-    <a href="services.pdf" target="_blank" class="btn primary">View Services</a>
-    <a href="https://www.fresha.com/" target="_blank" class="btn outline">Book Now</a>
-  </div>
+      <!-- Book Now goes to Fresha -->
+      <a class="btn outline" href="https://www.fresha.com/" target="_blank"
+         data-en="Book Now" data-ar="احجزي الآن">
+        Book Now
+      </a>
+    </div>
+  </main>
 
-</section>
-
-<!-- FLOATING BUTTONS -->
-<a href="#" class="float whatsapp"><i class="fab fa-whatsapp"></i></a>
-<a href="#" class="float call"><i class="fas fa-phone"></i></a>
-
-<!-- FOOTER -->
-<footer>
-  <a href="https://maps.google.com/?q=Diamond+Beauty+Jeddah"
-     target="_blank"
-     class="map-btn">
-    View Location on Google Maps
+  <!-- Floating Buttons -->
+  <a class="float whatsapp" href="https://wa.me/966000000000" target="_blank" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
   </a>
-  <p>© 2025 Diamond Beauty</p>
-</footer>
+  <a class="float call" href="tel:+966000000000" aria-label="Call">
+    <i class="fa-solid fa-phone"></i>
+  </a>
 
-<script src="script.js"></script>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <a class="map-btn" href="https://maps.google.com/?q=Diamond+Beauty+Jeddah" target="_blank"
+       data-en="View Location on Google Maps"
+       data-ar="عرض الموقع على خرائط Google">
+      View Location on Google Maps
+    </a>
+    <p>© 2025 Diamond Beauty</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
