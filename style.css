@@ -14,46 +14,47 @@ body {
 .top-bar {
   position: sticky;
   top: 0;
-  z-index: 1000;
-  height: 55px;
-  background: #f2eee7;
-  border-bottom: 1px solid #e0dbd3;
+  z-index: 9999;
+
+  height: 56px;
+  background: #efeae2;
+  border-bottom: 1px solid #d6d0c8;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.socials {
+.top-center {
   display: flex;
-  gap: 16px;
-}
-
-.socials a {
-  color: #4a453f;
+  gap: 18px;
   font-size: 18px;
 }
 
-.lang {
+.top-center a {
+  color: #4a453f;
+}
+
+.top-right {
   position: absolute;
   right: 20px;
 }
 
-.lang button {
+.top-right button {
   background: transparent;
   border: 1px solid #4a453f;
   padding: 4px 10px;
-  border-radius: 12px;
-  cursor: pointer;
+  border-radius: 14px;
   font-size: 12px;
-  margin-left: 6px;
+  cursor: pointer;
 }
 
 /* ================= LOGO ================= */
-.logo-section {
+.logo-wrapper {
   display: flex;
   justify-content: center;
-  margin: 35px 0 20px;
+  margin-top: 24px;
+  margin-bottom: 16px;
 }
 
 .logo {
@@ -62,10 +63,10 @@ body {
 
 /* Animation */
 .animate-logo {
-  animation: fadeDown 1.2s ease;
+  animation: dropFade 1s ease forwards;
 }
 
-@keyframes fadeDown {
+@keyframes dropFade {
   from {
     opacity: 0;
     transform: translateY(-20px);
@@ -76,23 +77,23 @@ body {
   }
 }
 
-/* ================= CONTENT ================= */
-.content {
+/* ================= HERO ================= */
+.hero {
   text-align: center;
   padding: 0 20px;
 }
 
-h1 {
+.hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: 42px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
-p {
+.hero p {
   max-width: 650px;
   margin: auto;
-  line-height: 1.7;
   font-size: 15px;
+  line-height: 1.7;
 }
 
 /* ================= BUTTONS ================= */
