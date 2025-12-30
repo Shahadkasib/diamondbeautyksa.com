@@ -47,14 +47,31 @@ body {
   padding: 20px;
 }
 
-/* LOGO — FIXED */
+/* LOGO – SLIGHTLY BIGGER */
 .logo {
-  max-width: 380px;   /* THIS IS THE KEY FIX */
+  max-width: 460px;   /* was 380px */
   width: 100%;
   height: auto;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
+/* LANGUAGE SWITCH */
+.lang-switch button {
+  background: none;
+  border: 1px solid #4a3e36;
+  padding: 6px 12px;
+  margin-left: 8px;
+  cursor: pointer;
+  font-family: 'The Seasons', serif;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* RTL SUPPORT */
+body[dir="rtl"] {
+  direction: rtl;
+  text-align: center;
+}
 /* TEXT */
 h1 {
   font-size: 42px;
