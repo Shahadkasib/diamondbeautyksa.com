@@ -8,62 +8,71 @@
 /* BASE */
 body {
   font-family: 'The Seasons', serif;
-  background-color: #fffdf8;
+  background: #fffdf8;
   color: #4a3e36;
-  text-align: center;
-  line-height: 1.7;
 }
 
-/* TOP SOCIALS */
-.top-socials {
-  padding: 20px;
+/* TOP BAR */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 30px;
 }
 
 .top-socials a {
-  margin: 0 12px;
+  margin-right: 15px;
   font-size: 18px;
   color: #4a3e36;
-  transition: opacity 0.3s ease;
 }
 
-.top-socials a:hover {
-  opacity: 0.6;
+.top-book {
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  background: #adbba5;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
 }
 
 /* HERO */
 .hero {
-  padding: 40px 20px 80px;
-  max-width: 900px;
-  margin: auto;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
 }
 
-/* LOGO */
+/* LOGO — FIXED */
 .logo {
-  height: 140px;
-  margin-bottom: 25px;
+  max-width: 380px;   /* THIS IS THE KEY FIX */
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
 }
 
-/* SLOGAN */
-.slogan {
+/* TEXT */
+h1 {
   font-size: 42px;
   margin-bottom: 20px;
 }
 
-/* ABOUT TEXT */
-.about-text {
+.about {
   max-width: 650px;
-  margin: auto;
   font-size: 16px;
-  margin-bottom: 45px;
   color: #6a5c52;
+  margin-bottom: 40px;
+  line-height: 1.8;
 }
 
 /* BUTTONS */
-.buttons {
+.actions {
   display: flex;
-  justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .btn {
@@ -72,32 +81,22 @@ body {
   font-size: 14px;
   font-weight: bold;
   text-decoration: none;
-  transition: all 0.3s ease;
 }
 
-.btn.primary {
-  background-color: #adbba5;
+.primary {
+  background: #adbba5;
   color: white;
 }
 
-.btn.primary:hover {
-  opacity: 0.85;
-}
-
-.btn.outline {
+.outline {
   border: 2px solid #adbba5;
   color: #4a3e36;
-}
-
-.btn.outline:hover {
-  background-color: #adbba5;
-  color: white;
 }
 
 /* FLOATING BUTTONS */
 .float {
   position: fixed;
-  right: 25px;
+  right: 22px;
   width: 52px;
   height: 52px;
   border-radius: 50%;
@@ -106,38 +105,38 @@ body {
   align-items: center;
   color: white;
   font-size: 22px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  z-index: 100;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
 .whatsapp {
   bottom: 90px;
-  background-color: #25D366;
+  background: #25D366;
 }
 
 .call {
   bottom: 25px;
-  background-color: #4a3e36;
+  background: #4a3e36;
 }
 
 /* FOOTER */
 footer {
-  padding: 35px;
+  text-align: center;
+  padding: 25px;
+  background: #f4f1ea;
   font-size: 14px;
-  background-color: #f4f1ea;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 @media (max-width: 768px) {
-  .logo {
-    height: 110px;
-  }
-
-  .slogan {
+  h1 {
     font-size: 32px;
   }
 
-  .about-text {
-    font-size: 15px;
+  .logo {
+    max-width: 260px;
+  }
+
+  .actions {
+    flex-direction: column;
   }
 }
