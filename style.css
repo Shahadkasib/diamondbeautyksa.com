@@ -1,4 +1,4 @@
-:root{
+:root {
   --bg: #fffdf8;
   --bar: #f4f1ea;
   --text: #4a3e36;
@@ -6,163 +6,157 @@
   --accent: #adbba5;
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
+body {
   background: var(--bg);
   color: var(--text);
   font-family: "Georgia", serif;
 }
 
-/* =========================
-   TOP BAR (NOW OBVIOUS)
-========================= */
-.topbar{
+/* ================= TOP BAR ================= */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background: var(--bar);
   border-bottom: 1px solid rgba(0,0,0,0.05);
-  padding: 12px 24px 18px;
 }
 
-/* First row */
-.topbar-row{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  position:relative;
-  margin-bottom: 10px;
+.topbar-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.socials{
-  display:flex;
-  gap:18px;
+.top-icons {
+  display: flex;
+  gap: 18px;
 }
 
-.socials a{
-  font-size:18px;
+.top-icons a {
+  font-size: 18px;
   color: var(--text);
-  opacity:.9;
 }
 
-.lang-switch{
-  position:absolute;
-  right:0;
-  display:flex;
-  gap:8px;
+.lang-switch {
+  position: absolute;
+  right: 24px;
+  display: flex;
+  gap: 8px;
 }
 
-.lang-switch button{
-  background:none;
-  border:1px solid var(--text);
-  padding:6px 14px;
-  border-radius:999px;
-  font-size:12px;
-  cursor:pointer;
+.lang-switch button {
+  background: none;
+  border: 1px solid var(--text);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
 }
 
-/* Logo row */
-.logo-row{
-  display:flex;
-  justify-content:center;
+/* ================= LOGO SECTION ================= */
+.logo-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px 10px;
 }
 
-.logo{
+.logo {
   max-width: 420px;
-  width:auto;
-  height:auto;
+  width: auto;
+  height: auto;
 }
 
-/* =========================
-   HERO (STARTS AFTER BAR)
-========================= */
-.hero{
-  text-align:center;
-  padding: 50px 20px 80px;
+/* ================= HERO ================= */
+.hero {
+  text-align: center;
+  padding: 40px 20px 80px;
 }
 
-.hero h1{
-  font-size:44px;
-  margin-bottom:18px;
+.hero h1 {
+  font-size: 44px;
+  margin-bottom: 18px;
 }
 
-.about{
-  max-width:720px;
-  margin:0 auto 38px;
-  font-size:16px;
-  line-height:1.9;
+.about {
+  max-width: 720px;
+  margin: 0 auto 38px;
+  font-size: 16px;
+  line-height: 1.9;
   color: var(--muted);
 }
 
-.actions{
-  display:flex;
-  justify-content:center;
-  gap:18px;
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
 }
 
-.btn{
-  padding:14px 38px;
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:600;
+.btn {
+  padding: 14px 38px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.primary{
+.primary {
   background: var(--accent);
-  color:#fff;
+  color: white;
 }
 
-.outline{
-  border:2px solid var(--accent);
+.outline {
+  border: 2px solid var(--accent);
   color: var(--text);
 }
 
-/* =========================
-   FLOATING BUTTONS
-========================= */
-.float{
-  position:fixed;
-  right:22px;
-  width:54px;
-  height:54px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#fff;
-  font-size:22px;
-  z-index:999;
+/* ================= FLOATING ================= */
+.float {
+  position: fixed;
+  right: 22px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 22px;
+  z-index: 999;
 }
 
-.whatsapp{ bottom:95px; background:#25D366; }
-.call{ bottom:25px; background: var(--text); }
+.whatsapp { bottom: 95px; background: #25D366; }
+.call { bottom: 25px; background: var(--text); }
 
-/* =========================
-   FOOTER
-========================= */
-footer{
+/* ================= FOOTER ================= */
+footer {
   background: var(--bar);
-  text-align:center;
-  padding:40px 20px;
+  text-align: center;
+  padding: 40px 20px;
 }
 
-.map-btn{
-  display:inline-block;
-  margin-bottom:14px;
-  padding:12px 30px;
-  border-radius:999px;
-  border:1px solid var(--accent);
+.map-btn {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 12px 30px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
   color: var(--text);
-  text-decoration:none;
+  text-decoration: none;
 }
 
-/* =========================
-   MOBILE
-========================= */
-@media(max-width:768px){
-  .logo{ max-width:280px; }
-  .hero h1{ font-size:32px; }
-  .actions{ flex-direction:column; }
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .logo { max-width: 280px; }
+  .hero h1 { font-size: 32px; }
+  .actions { flex-direction: column; }
 }
