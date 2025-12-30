@@ -1,165 +1,143 @@
-/* ================================
-   GLOBAL RESET
-================================ */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ================================
-   BASE STYLES
-================================ */
+/* BASE */
 body {
   font-family: 'The Seasons', serif;
   background-color: #fffdf8;
   color: #4a3e36;
-  line-height: 1.6;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* ================================
-   HEADER
-================================ */
-.services-header {
   text-align: center;
-  padding: 40px 20px 25px;
-  border-bottom: 1px solid #eee;
+  line-height: 1.7;
 }
 
-.logo-center {
-  height: 85px;
-  margin-bottom: 15px;
+/* TOP SOCIALS */
+.top-socials {
+  padding: 20px;
 }
 
-/* ================================
-   SOCIAL ICONS
-================================ */
-.social-icons {
-  margin-top: 10px;
-}
-
-.social-icons a {
+.top-socials a {
   margin: 0 12px;
   font-size: 18px;
   color: #4a3e36;
   transition: opacity 0.3s ease;
 }
 
-.social-icons a:hover {
+.top-socials a:hover {
   opacity: 0.6;
 }
 
-/* ================================
-   CATEGORY NAVIGATION
-================================ */
-.category-nav {
+/* HERO */
+.hero {
+  padding: 40px 20px 80px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* LOGO */
+.logo {
+  height: 140px;
+  margin-bottom: 25px;
+}
+
+/* SLOGAN */
+.slogan {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+/* ABOUT TEXT */
+.about-text {
+  max-width: 650px;
+  margin: auto;
+  font-size: 16px;
+  margin-bottom: 45px;
+  color: #6a5c52;
+}
+
+/* BUTTONS */
+.buttons {
   display: flex;
   justify-content: center;
-  gap: 14px;
-  padding: 25px 20px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
-.category-nav a {
-  background-color: #f4f1ea;
-  padding: 8px 18px;
+.btn {
+  padding: 14px 34px;
   border-radius: 30px;
   font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.category-nav a:hover {
+.btn.primary {
   background-color: #adbba5;
   color: white;
 }
 
-/* ================================
-   SERVICES CONTAINER
-================================ */
-.services-container {
-  max-width: 900px;
-  margin: auto;
-  padding: 60px 20px;
+.btn.primary:hover {
+  opacity: 0.85;
 }
 
-/* ================================
-   SERVICE SECTIONS
-================================ */
-.service-section {
-  margin-bottom: 80px;
+.btn.outline {
+  border: 2px solid #adbba5;
+  color: #4a3e36;
 }
 
-.service-section h2 {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 30px;
-  letter-spacing: 0.5px;
+.btn.outline:hover {
+  background-color: #adbba5;
+  color: white;
 }
 
-/* ================================
-   SERVICE BOX
-================================ */
-.service-box {
-  background-color: white;
-  border-radius: 18px;
-  padding: 30px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-/* ================================
-   SERVICE ROWS
-================================ */
-.row {
+/* FLOATING BUTTONS */
+.float {
+  position: fixed;
+  right: 25px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 12px 0;
-  border-bottom: 1px dashed #e5dfd6;
-  font-size: 15px;
+  color: white;
+  font-size: 22px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  z-index: 100;
 }
 
-.row span:last-child {
-  font-weight: 500;
+.whatsapp {
+  bottom: 90px;
+  background-color: #25D366;
 }
 
-.row:last-child {
-  border-bottom: none;
+.call {
+  bottom: 25px;
+  background-color: #4a3e36;
 }
 
-/* ================================
-   FOOTER
-================================ */
-.services-footer {
-  text-align: center;
-  padding: 35px 20px;
-  background-color: #f4f1ea;
+/* FOOTER */
+footer {
+  padding: 35px;
   font-size: 14px;
-  letter-spacing: 0.5px;
+  background-color: #f4f1ea;
 }
 
-/* ================================
-   RESPONSIVE
-================================ */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-
-  .logo-center {
-    height: 70px;
+  .logo {
+    height: 110px;
   }
 
-  .service-section h2 {
-    font-size: 24px;
+  .slogan {
+    font-size: 32px;
   }
 
-  .row {
-    font-size: 14px;
-  }
-
-  .category-nav {
-    gap: 10px;
+  .about-text {
+    font-size: 15px;
   }
 }
