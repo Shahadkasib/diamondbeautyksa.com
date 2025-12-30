@@ -4,4 +4,11 @@ function setLang(lang) {
   document.querySelectorAll("[data-en]").forEach(el => {
     el.textContent = el.getAttribute(`data-${lang}`);
   });
+
+  localStorage.setItem("lang", lang);
 }
+
+window.onload = () => {
+  const savedLang = localStorage.getItem("lang") || "en";
+  setLang(savedLang);
+};
