@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Diamond Beauty</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=The+Seasons&family=Cairo:wght@400;600&display=swap" rel="stylesheet">
@@ -14,20 +14,19 @@
 
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <!-- TOP BAR -->
 <div class="top-bar">
 
-  <!-- Socials (center) -->
+  <!-- Social icons (center) -->
   <div class="top-socials">
     <a href="https://instagram.com/diamondbeautyksa" target="_blank"><i class="fab fa-instagram"></i></a>
     <a href="https://tiktok.com/@diamondbeauty" target="_blank"><i class="fab fa-tiktok"></i></a>
     <a href="https://snapchat.com/add/diamondbeauty" target="_blank"><i class="fab fa-snapchat"></i></a>
   </div>
 
-  <!-- Language (right) -->
+  <!-- Language -->
   <div class="lang-switch">
     <button onclick="setLang('en')">EN</button>
     <button onclick="setLang('ar')">AR</button>
@@ -38,21 +37,21 @@
 <!-- HERO -->
 <section class="hero">
 
-  <img src="logo.png" alt="Diamond Beauty Logo" class="logo">
+  <img src="logo.png" class="logo fade-up delay-1" alt="Diamond Beauty Logo">
 
-  <h1
-    data-en="Luxury, Redefined"
-    data-ar="الفخامة، كما يجب أن تكون">
+  <h1 class="fade-up delay-2"
+      data-en="Luxury, Redefined"
+      data-ar="الفخامة، كما يجب أن تكون">
     Luxury, Redefined
   </h1>
 
-  <p class="about"
+  <p class="about fade-up delay-3"
      data-en="Once a small neighborhood salon in Ar Rawdah, Diamond Beauty grew with love, trust, and dedication. With over 20 years of experience, we are proud to open our doors today, bringing refined beauty, care, and expertise to every woman who walks in."
      data-ar="بدأت دايموند بيوتي كصالون صغير في حي الروضة، ونمت بمحبة وثقة واهتمام. بخبرة تتجاوز 20 عاماً، نفخر اليوم بافتتاح أبوابنا لنقدم الجمال الراقي والعناية والخبرة لكل امرأة تزورنا.">
     Once a small neighborhood salon in Ar Rawdah, Diamond Beauty grew with love, trust, and dedication. With over 20 years of experience, we are proud to open our doors today, bringing refined beauty, care, and expertise to every woman who walks in.
   </p>
 
-  <div class="actions">
+  <div class="actions fade-up delay-3">
     <a href="services.pdf" target="_blank"
        class="btn primary"
        data-en="View Services"
@@ -80,8 +79,15 @@
   <i class="fas fa-phone"></i>
 </a>
 
+<!-- FOOTER -->
 <footer>
-  © 2025 Diamond Beauty
+  <a href="https://maps.google.com/?q=Diamond+Beauty+Jeddah"
+     target="_blank"
+     class="map-btn">
+     View Location on Google Maps
+  </a>
+
+  <p>© 2025 Diamond Beauty</p>
 </footer>
 
 <script src="script.js"></script>
